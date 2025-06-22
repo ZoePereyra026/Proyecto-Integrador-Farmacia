@@ -82,7 +82,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: var(--azul-profundo);
+  color: #333;
 }
 
 .descripcion {
@@ -94,13 +94,13 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin: 15px 0;
+  margin: 15px 0px;
 }
 
 .etiqueta-cantidad {
   font-weight: bold;
   font-size: 16px;
-  color: #555;
+  color: #333;
 }
 
 .cantidad-elegante {
@@ -129,7 +129,7 @@ body {
   width: 32px;
   text-align: center;
   font-weight: 500;
-  color: black;
+  color: #333;
 }
 
 .contenedor-boton {
@@ -160,4 +160,87 @@ body {
   color: grey;
   text-align: center;
   font-size: 14px;
+}
+
+/*Diseño Responsive*/
+
+/* Dispositivos hasta 768px */
+@media (max-width: 768px) {
+  .detalle-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 25px;
+    width: 60%;
+  }
+
+  .miniaturas img{
+    width: 80px;
+    height: 80px;
+  }
+
+  .imagen-principal, .info-producto {
+    width: 75%;
+    text-align: left;
+  }
+
+  .navbar-brand {
+    margin-left: 60px;
+    justify-content: left;
+  }
+
+  .info-producto h1 {
+    font-size: 20px;
+  }
+
+  .precio {
+    font-size: 20px;
+  }
+
+  .descripcion {
+    font-size: 14px;
+  }
+
+  .fila-cantidad {
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+
+  .contenedor-boton {
+    justify-content: center;
+  }
+}
+
+/* Dispositivos hasta 450px */
+@media (max-width: 450px) {
+  .imagen-principal {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .miniaturas img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btn-cantidad {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .valor-cantidad {
+    font-size: 16px;
+  }
+
+  .agregar-carrito {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px 0;
+  }
+
+  .navbar-brand span {
+    font-size: 16px;
+  }
 }

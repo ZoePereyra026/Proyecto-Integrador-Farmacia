@@ -69,6 +69,37 @@ https://github.com/martinSadir21/Proyecto-Integrador-Farmacia.git
 
 /Proyecto-Integrador-Farmacia/
 │
+├── config/
+│   └── database.js
+│
+├── controllers/
+│   ├── productoController.js 
+│   └── userController.js
+│
+├── data/
+│   ├── producto.json
+│   └── user.json
+│
+├── middleware/
+│
+├── models/
+│   ├── productoModels.js
+│   └── userModels.js
+│
+├── node_modules/
+│   └── (dependencias instaladas)
+│
+├── routes/
+│   ├── productoRoutes.js
+│   └── userRoutes.js
+│
+├── .env
+├── package-lock.json
+├── package.json
+├── productoApi.http
+├── server.js
+└── userApi.http
+│
 ├── index.html                # Página principal (Inicio)
 ├── productos.html            # Catálogo general de productos
 ├── producto.html             # Detalle de un producto

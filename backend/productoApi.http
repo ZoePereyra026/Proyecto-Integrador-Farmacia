@@ -1,0 +1,52 @@
+### Ruta principal (opcional para testeo)
+GET http://localhost:3000/
+Content-Type: application/json
+
+###
+
+### Crear nuevo producto
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+  "id": 51,
+  "nombre": "Test Producto",
+  "descripcion": "Producto de prueba para el endpoint POST.",
+  "precio": 999,
+  "categoria": "Test""Demo",
+  "fabricante": "Copilot Labs",
+  "imagenUrl": "https://example.com/test.jpg"
+}
+
+###
+
+### Obtener todos los productos
+GET http://localhost:3000/api/productos
+Content-Type: application/json
+
+###
+
+### Obtener producto por ID
+GET http://localhost:3000/api/productos/23
+Content-Type: application/json
+
+###
+
+### Actualizar producto por ID
+PUT http://localhost:3000/api/productos/23
+Content-Type: application/json
+
+{
+  "nombre": "Producto Actualizado",
+  "descripcion": "Ahora con datos modificados.",
+  "precio": 888,
+  "categoria": ["Actualizado"], 
+  "fabricante": "America Labs",
+  "imagenUrl": "https://example.com/nueva.jpg"
+}
+
+###
+
+### Eliminar producto por ID
+DELETE http://localhost:3000/api/productos/50
+Content-Type: application/json

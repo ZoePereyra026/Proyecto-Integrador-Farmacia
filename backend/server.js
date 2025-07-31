@@ -1,28 +1,34 @@
 const express = require("express");
 require("dotenv").config();
 
-
-const connectDB = require("./config/database");
+const { connUsuario, connProducto } = require("./config/database");
 const userRoutes = require("./routes/userRoutes");
+const productoRoutes = require("./routes/productoRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Conexión a MongoDB
-connectDB();
-
-// Middleware
+// Middleware para parseo JSON
 app.use(express.json());
+
+// Conexión a las base de datos (Usuario, Producto)
+connUsuario.once("open", () => {
+  console.log("Conectado a base de datos: Usuario");
+});
+connProducto.once("open", () => {
+  console.log("Conectado a base de datos: Producto");
+});
 
 // Ruta principal
 app.get("/", (req, res) =>
   res.json({ message: "Bienvenidos a la API REST de eCommerce - Farmacia San Martín!" })
 );
 
-// Rutas de los usuarios
+// Rutas
 app.use("/api/usuarios", userRoutes);
+app.use("/api/productos", productoRoutes);
 
-// Iniciar servidor
+// Iniciar el servidor
 app.listen(PORT, () => {
-  console.log(` Servidor inicializado en: http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

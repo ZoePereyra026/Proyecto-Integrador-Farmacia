@@ -1,0 +1,22 @@
+[
+  { "username": "ana_user",      "email": "ana@example.com",      "password": "passwordAna123",      "role": "user" },
+  { "username": "juan_admin",    "email": "juan@example.com",     "password": "passwordJuan123",     "role": "admin" },
+  { "username": "carla_user",    "email": "carla@example.com",    "password": "passwordCarla123",    "role": "user" },
+  { "username": "luis_admin",    "email": "luis@example.com",     "password": "passwordLuis123",     "role": "admin" },
+  { "username": "maria_user",    "email": "maria@example.com",    "password": "passwordMaria123",    "role": "user" },
+  { "username": "roberto_admin", "email": "roberto@example.com",  "password": "passwordRoberto123",  "role": "admin" },
+  { "username": "lucia_user",    "email": "lucia@example.com",    "password": "passwordLucia123",    "role": "user" },
+  { "username": "diego_admin",   "email": "diego@example.com",    "password": "passwordDiego123",    "role": "admin" },
+  { "username": "flor_user",     "email": "flor@example.com",     "password": "passwordFlor123",     "role": "user" },
+  { "username": "marcos_admin",  "email": "marcos@example.com",   "password": "passwordMarcos123",   "role": "admin" },
+  { "username": "sofia_user",    "email": "sofia@example.com",    "password": "passwordSofia123",    "role": "user" },
+  { "username": "javier_admin",  "email": "javier@example.com",   "password": "passwordJavier123",   "role": "admin" },
+  { "username": "natalia_user",  "email": "natalia@example.com",  "password": "passwordNatalia123",  "role": "user" },
+  { "username": "edu_admin",     "email": "edu@example.com",      "password": "passwordEdu123",      "role": "admin" },
+  { "username": "valen_user",    "email": "valen@example.com",    "password": "passwordValen123",    "role": "user" },
+  { "username": "dario_admin",   "email": "dario@example.com",    "password": "passwordDario123",    "role": "admin" },
+  { "username": "camila_user",   "email": "camila@example.com",   "password": "passwordCamila123",   "role": "user" },
+  { "username": "santi_admin",   "email": "santi@example.com",    "password": "passwordSanti123",    "role": "admin" },
+  { "username": "romi_user",     "email": "romi@example.com",     "password": "passwordRomi123",     "role": "user" },
+  { "username": "andres_admin",  "email": "andres@example.com",   "password": "passwordAndres123",   "role": "admin" }
+]

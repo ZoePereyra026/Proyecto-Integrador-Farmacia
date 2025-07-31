@@ -4,7 +4,7 @@ const productoController = require("../controllers/productoController");
 const router = Router();
 
 // Crear producto
-router.post("/", productoController.crearProducto); // No funciona
+router.post("/", productoController.crearProducto); // Si funciona
 
 // Obtener todos los productos
 router.get("/", productoController.obtenerProductos); // Si funciona

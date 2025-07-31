@@ -13,7 +13,7 @@ Content-Type: application/json
   "nombre": "Test Producto",
   "descripcion": "Producto de prueba para el endpoint POST.",
   "precio": 999,
-  "categoria": "Test""Demo",
+  "categoria": ["Test","Demo"],
   "fabricante": "Copilot Labs",
   "imagenUrl": "https://example.com/test.jpg"
 }

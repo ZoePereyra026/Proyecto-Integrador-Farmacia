@@ -1,0 +1,35 @@
+### Crear nueva categoría
+POST http://localhost:3000/api/categorias
+Content-Type: application/json
+
+{
+  "id": 99,
+  "nombre": "Fitoterapia Natural",
+  "descripcion": "Remedios elaborados con mezclas de hierbas medicinales que promueven el alivio de síntomas digestivos, respiratorios u hormonales de forma natural.",
+  "destacada": false,
+  "estado": true
+}
+
+### Obtener todas las categorías
+GET http://localhost:3000/api/categorias
+
+### Obtener una categoría por ID
+GET http://localhost:3000/api/categorias/99
+
+### Actualizar una categoría por ID
+PUT http://localhost:3000/api/categorias/99
+Content-Type: application/json
+
+{
+  "nombre": "Fitoterapia Natural",
+  "descripcion": "Actualización: remedios herbales enfocados en digestión y bienestar.",
+  "destacada": true,
+  "estado": true
+}
+
+### Desactivar una categoría por ID
+PUT http://localhost:3000/api/categorias/desactivar/99
+Content-Type: application/json
+
+### Eliminar una categoría por ID
+DELETE http://localhost:3000/api/categorias/99

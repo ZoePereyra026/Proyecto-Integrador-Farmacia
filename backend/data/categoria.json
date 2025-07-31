@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "nombre": "Analgésico",
+    "estado": true,
+    "destacada": true,
+    "descripcion": "Medicamentos diseñados para aliviar diversos tipos de dolor, como cefaleas, dolores musculares o articulares, sin afectar directamente la causa subyacente."
+  },
+  {
+    "id": 2,
+    "nombre": "Antiinflamatorio",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Productos indicados para reducir la inflamación y los síntomas asociados, como hinchazón y enrojecimiento, especialmente en afecciones musculares y articulares."
+  },
+  {
+    "id": 3,
+    "nombre": "Gastrointestinal",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Tratamientos que ayudan a regular el sistema digestivo, incluyendo alivio de acidez, indigestión, problemas estomacales y deshidratación por cuadros gastrointestinales."
+  },
+  {
+    "id": 4,
+    "nombre": "Antibiótico",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Medicamentos que combaten infecciones causadas por bacterias, indicados comúnmente en patologías respiratorias, urinarias o dérmicas, bajo receta médica."
+  },
+  {
+    "id": 5,
+    "nombre": "Antialérgico",
+    "estado": true,
+    "destacada": true,
+    "descripcion": "Fármacos utilizados para disminuir o eliminar los síntomas de reacciones alérgicas, como congestión nasal, estornudos o irritación cutánea."
+  },
+  {
+    "id": 6,
+    "nombre": "Vitaminas",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Suplementos necesarios para mantener el equilibrio de funciones fisiológicas, reforzar defensas naturales y contribuir al bienestar general del organismo."
+  },
+  {
+    "id": 7,
+    "nombre": "Suplementos",
+    "estado": true,
+    "destacada": true,
+    "descripcion": "Complementos nutricionales que apoyan funciones específicas del cuerpo como inmunidad, energía, salud ósea, muscular o del sistema nervioso."
+  },
+  {
+    "id": 8,
+    "nombre": "Cardiología",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Productos destinados al cuidado del sistema cardiovascular, como anticoagulantes o complementos que contribuyen a la prevención de eventos cardíacos."
+  },
+  {
+    "id": 9,
+    "nombre": "Dermatología",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Tratamientos tópicos y preventivos enfocados en la salud de la piel, desde protección solar hasta cremas antimicóticas y calmantes para irritaciones."
+  },
+  {
+    "id": 10,
+    "nombre": "Respiratorio",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Medicamentos y dispositivos dirigidos al alivio de afecciones respiratorias como bronquitis, tos y congestión nasal, incluyendo mucolíticos y nebulizadores."
+  },
+  {
+    "id": 11,
+    "nombre": "Pediatría",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Productos formulados especialmente para niños y bebés, que cubren necesidades desde nutrición hasta tratamientos específicos para su desarrollo."
+  },
+  {
+    "id": 12,
+    "nombre": "Rehabilitación",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Artículos destinados a aliviar el dolor muscular, mejorar la circulación y apoyar la recuperación física tras lesiones o fatiga."
+  },
+  {
+    "id": 13,
+    "nombre": "Sueño",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Productos que promueven el descanso natural, incluyendo reguladores del sueño y relajantes para combatir el insomnio leve o estrés nocturno."
+  },
+  {
+    "id": 14,
+    "nombre": "Primeros Auxilios",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Elementos esenciales para atención inmediata de heridas, cortes o incidentes menores, como antisépticos, vendas y sueros fisiológicos."
+  },
+  {
+    "id": 15,
+    "nombre": "Protección solar",
+    "estado": true,
+    "destacada": true,
+    "descripcion": "Productos diseñados para proteger la piel contra los rayos solares UVB/UVA, como bloqueadores, cremas post exposición y protectores labiales."
+  },
+  {
+    "id": 16,
+    "nombre": "Diabetes",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Herramientas y productos para la medición y manejo de los niveles de glucosa en sangre, dirigidos especialmente a pacientes diabéticos."
+  },
+  {
+    "id": 17,
+    "nombre": "Equipamiento",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Instrumentos médicos y accesorios como nebulizadores o guantes, usados tanto en entornos clínicos como en el hogar para tareas sanitarias."
+  },
+  {
+    "id": 18,
+    "nombre": "Higiene",
+    "estado": true,
+    "destacada": true,
+    "descripcion": "Productos para mantener la limpieza personal y de superficies, que incluyen antisépticos, geles antibacteriales y toallitas húmedas."
+  },
+  {
+    "id": 19,
+    "nombre": "Prevención",
+    "estado": true,
+    "destacada": true,
+    "descripcion": "Categoría dedicada a productos que ayudan a evitar enfermedades o contagios, manteniendo una barrera efectiva ante agentes externos."
+  },
+  {
+    "id": 20,
+    "nombre": "Odontología",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Artículos para la higiene y frescura bucal, como antisépticos sin alcohol, que contribuyen a prevenir caries y mantener la salud dental."
+  },
+  {
+    "id": 21,
+    "nombre": "Articulaciones",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Suplementos y productos enfocados en el cuidado de articulaciones, ayudando en la movilidad, elasticidad y salud osteoarticular."
+  },
+  {
+    "id": 22,
+    "nombre": "Maternidad",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Productos orientados a la salud y bienestar durante el embarazo y el postparto, como cremas antiestrías o suplementos esenciales."
+  },
+  {
+    "id": 23,
+    "nombre": "Protección",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Elementos de seguridad como guantes de nitrilo, destinados a proteger la piel y evitar contacto con agentes contaminantes o irritantes."
+  },
+  {
+    "id": 24,
+    "nombre": "Bienestar",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Productos naturales orientados a mejorar el estado emocional y mental, como aceites esenciales para aromaterapia o relajación."
+  },
+  {
+    "id": 25,
+    "nombre": "Fitoterapia",
+    "estado": true,
+    "destacada": false,
+    "descripcion": "Remedios elaborados con mezclas de hierbas medicinales que promueven el alivio de síntomas digestivos, respiratorios u hormonales de forma natural."
+  }
+]

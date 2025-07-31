@@ -63,3 +63,10 @@ Content-Type: application/json
 GET http://localhost:3000/api/productos/filtrar/precio?precioMin=100&precioMax=500
 Content-Type: application/json
 
+### Actualizar solo el stock de un producto por su ID
+PUT http://localhost:3000/api/productos/stock/12
+Content-Type: application/json
+
+{
+  "stock": 250
+}

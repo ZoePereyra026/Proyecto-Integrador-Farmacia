@@ -6,7 +6,8 @@
     "precio": 450,
     "categoria": ["Analgésico", "Antiinflamatorio"],
     "fabricante": "Bayer",
-    "imagenUrl": "https://example.com/ibuprofeno600.jpg"
+    "imagenUrl": "https://example.com/ibuprofeno600.jpg",
+    "stock": 180
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "precio": 380,
     "categoria": ["Analgésico"],
     "fabricante": "Genfar",
-    "imagenUrl": "https://example.com/paracetamol500.jpg"
+    "imagenUrl": "https://example.com/paracetamol500.jpg",
+    "stock": 220
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "precio": 520,
     "categoria": ["Gastrointestinal"],
     "fabricante": "AstraZeneca",
-    "imagenUrl": "https://example.com/omeprazol20.jpg"
+    "imagenUrl": "https://example.com/omeprazol20.jpg",
+    "stock": 90
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "precio": 750,
     "categoria": ["Antibiótico"],
     "fabricante": "GlaxoSmithKline",
-    "imagenUrl": "https://example.com/amoxicilina500.jpg"
+    "imagenUrl": "https://example.com/amoxicilina500.jpg",
+    "stock": 75
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "precio": 290,
     "categoria": ["Antialérgico"],
     "fabricante": "Sanofi",
-    "imagenUrl": "https://example.com/clorfenamina.jpg"
+    "imagenUrl": "https://example.com/clorfenamina.jpg",
+    "stock": 140
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "precio": 620,
     "categoria": ["Suplementos", "Vitaminas"],
     "fabricante": "Nature’s Bounty",
-    "imagenUrl": "https://example.com/vitaminaC.jpg"
+    "imagenUrl": "https://example.com/vitaminaC.jpg",
+    "stock": 110
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "precio": 430,
     "categoria": ["Cardiología", "Analgésico"],
     "fabricante": "Bayer",
-    "imagenUrl": "https://example.com/aspirina100.jpg"
+    "imagenUrl": "https://example.com/aspirina100.jpg",
+    "stock": 160
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "precio": 350,
     "categoria": ["Antialérgico"],
     "fabricante": "Pfizer",
-    "imagenUrl": "https://example.com/loratadina.jpg"
+    "imagenUrl": "https://example.com/loratadina.jpg",
+    "stock": 130
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "precio": 680,
     "categoria": ["Dermatología"],
     "fabricante": "Bristol-Myers Squibb",
-    "imagenUrl": "https://example.com/clotrimazol.jpg"
+    "imagenUrl": "https://example.com/clotrimazol.jpg",
+    "stock": 70
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "precio": 180,
     "categoria": ["Gastrointestinal"],
     "fabricante": "Abbott",
-    "imagenUrl": "https://example.com/rehidratacion.jpg"
+    "imagenUrl": "https://example.com/rehidratacion.jpg",
+    "stock": 240
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "precio": 240,
     "categoria": ["Vitaminas", "Suplementos"],
     "fabricante": "Laboratorios Richmond",
-    "imagenUrl": "https://example.com/acidofolico.jpg"
+    "imagenUrl": "https://example.com/acidofolico.jpg",
+    "stock": 120
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "precio": 410,
     "categoria": ["Respiratorio", "Pediatría"],
     "fabricante": "Novartis",
-    "imagenUrl": "https://example.com/ambroxol.jpg"
+    "imagenUrl": "https://example.com/ambroxol.jpg",
+    "stock": 85
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "precio": 700,
     "categoria": ["Rehabilitación", "Analgésico"],
     "fabricante": "Salonpas",
-    "imagenUrl": "https://example.com/parchestermicos.jpg"
+    "imagenUrl": "https://example.com/parchestermicos.jpg",
+    "stock": 50
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "precio": 560,
     "categoria": ["Sueño", "Suplementos"],
     "fabricante": "Natrol",
-    "imagenUrl": "https://example.com/melatonina.jpg"
+    "imagenUrl": "https://example.com/melatonina.jpg",
+    "stock": 60
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "precio": 310,
     "categoria": ["Primeros Auxilios"],
     "fabricante": "Laboratorios Andrómaco",
-    "imagenUrl": "https://example.com/sprayantiseptico.jpg"
+    "imagenUrl": "https://example.com/sprayantiseptico.jpg",
+    "stock": 100
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "precio": 980,
     "categoria": ["Dermatología", "Protección solar"],
     "fabricante": "La Roche-Posay",
-    "imagenUrl": "https://example.com/cremasolar.jpg"
+    "imagenUrl": "https://example.com/cremasolar.jpg",
+    "stock": 55
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "precio": 1300,
     "categoria": ["Diabetes"],
     "fabricante": "Accu-Chek",
-    "imagenUrl": "https://example.com/tirasglucosa.jpg"
+    "imagenUrl": "https://example.com/tirasglucosa.jpg",
+    "stock": 40
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "precio": 3500,
     "categoria": ["Respiratorio", "Equipamiento"],
     "fabricante": "Omron",
-    "imagenUrl": "https://example.com/nebulizador.jpg"
+    "imagenUrl": "https://example.com/nebulizador.jpg",
+    "stock": 25
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "precio": 250,
     "categoria": ["Higiene", "Prevención"],
     "fabricante": "Laboratorios Bagó",
-    "imagenUrl": "https://example.com/alcoholengel.jpg"
+    "imagenUrl": "https://example.com/alcoholengel.jpg",
+    "stock": 300
   },
   {
     "id": 20,
@@ -177,7 +196,8 @@
     "precio": 780,
     "categoria": ["Rehabilitación"],
     "fabricante": "Just",
-    "imagenUrl": "https://example.com/gelpiernas.jpg"
+    "imagenUrl": "https://example.com/gelpiernas.jpg",
+    "stock": 65
   },
   {
     "id": 21,
@@ -186,7 +206,8 @@
     "precio": 320,
     "categoria": ["Higiene", "Prevención"],
     "fabricante": "Huggies",
-    "imagenUrl": "https://example.com/toallitas.jpg"
+    "imagenUrl": "https://example.com/toallitas.jpg",
+    "stock": 190
   },
   {
     "id": 22,
@@ -195,7 +216,8 @@
     "precio": 980,
     "categoria": ["Suplementos", "Articulaciones"],
     "fabricante": "NeoLife",
-    "imagenUrl": "https://example.com/colageno.jpg"
+    "imagenUrl": "https://example.com/colageno.jpg",
+    "stock": 70
   },
   {
     "id": 23,
@@ -204,7 +226,8 @@
     "precio": 450,
     "categoria": ["Higiene", "Odontología"],
     "fabricante": "Listerine",
-    "imagenUrl": "https://example.com/enjuague.jpg"
+    "imagenUrl": "https://example.com/enjuague.jpg",
+    "stock": 150
   },
   {
     "id": 24,
@@ -213,7 +236,8 @@
     "precio": 850,
     "categoria": ["Protección", "Equipamiento"],
     "fabricante": "3M",
-    "imagenUrl": "https://example.com/guantes.jpg"
+    "imagenUrl": "https://example.com/guantes.jpg",
+    "stock": 45
   },
   {
     "id": 25,
@@ -222,7 +246,8 @@
     "precio": 590,
     "categoria": ["Suplementos", "Pediatría"],
     "fabricante": "Laboratorio Elea",
-    "imagenUrl": "https://example.com/hierro.jpg"
+    "imagenUrl": "https://example.com/hierro.jpg",
+    "stock": 95
   },
   {
     "id": 26,
@@ -231,7 +256,8 @@
     "precio": 490,
     "categoria": ["Higiene", "Prevención"],
     "fabricante": "Lysoform",
-    "imagenUrl": "https://example.com/desinfectante.jpg"
+    "imagenUrl": "https://example.com/desinfectante.jpg",
+    "stock": 210
   },
   {
     "id": 27,
@@ -240,7 +266,8 @@
     "precio": 730,
     "categoria": ["Dermatología", "Maternidad"],
     "fabricante": "Mustela",
-    "imagenUrl": "https://example.com/antiestrias.jpg"
+    "imagenUrl": "https://example.com/antiestrias.jpg",
+    "stock": 80
   },
   {
     "id": 28,
@@ -249,7 +276,8 @@
     "precio": 220,
     "categoria": ["Pediatría", "Primeros Auxilios"],
     "fabricante": "Laboratorios Gador",
-    "imagenUrl": "https://example.com/sueros.jpg"
+    "imagenUrl": "https://example.com/sueros.jpg",
+    "stock": 160
   },
   {
     "id": 29,
@@ -258,7 +286,8 @@
     "precio": 670,
     "categoria": ["Dermatología", "Protección solar"],
     "fabricante": "Avène",
-    "imagenUrl": "https://example.com/postsolar.jpg"
+    "imagenUrl": "https://example.com/postsolar.jpg",
+    "stock": 70
   },
   {
     "id": 30,
@@ -267,7 +296,8 @@
     "precio": 840,
     "categoria": ["Bienestar", "Sueño"],
     "fabricante": "Just",
-    "imagenUrl": "https://example.com/lavanda.jpg"
+    "imagenUrl": "https://example.com/lavanda.jpg",
+    "stock": 65
   },
   {
     "id": 31,
@@ -276,7 +306,8 @@
     "precio": 260,
     "categoria": ["Higiene", "Prevención"],
     "fabricante": "ProtectGel",
-    "imagenUrl": "https://example.com/gelaloe.jpg"
+    "imagenUrl": "https://example.com/gelaloe.jpg",
+    "stock": 300
   },
   {
     "id": 32,
@@ -285,7 +316,8 @@
     "precio": 150,
     "categoria": ["Protección solar", "Dermatología"],
     "fabricante": "Vaseline",
-    "imagenUrl": "https://example.com/labialfps30.jpg"
+    "imagenUrl": "https://example.com/labialfps30.jpg",
+    "stock": 180
   },
   {
     "id": 33,
@@ -294,7 +326,8 @@
     "precio": 340,
     "categoria": ["Fitoterapia", "Gastrointestinal"],
     "fabricante": "Hierbas Andinas",
-    "imagenUrl": "https://example.com/tedigestivo.jpg"
+    "imagenUrl": "https://example.com/tedigestivo.jpg",
+    "stock": 110
   },
   {
     "id": 34,
@@ -303,7 +336,8 @@
     "precio": 420,
     "categoria": ["Rehabilitación", "Natural"],
     "fabricante": "Just",
-    "imagenUrl": "https://example.com/arnica.jpg"
+    "imagenUrl": "https://example.com/arnica.jpg",
+    "stock": 90
   },
   {
     "id": 35,
@@ -312,7 +346,8 @@
     "precio": 330,
     "categoria": ["Gastrointestinal"],
     "fabricante": "Bayer",
-    "imagenUrl": "https://example.com/laxante.jpg"
+    "imagenUrl": "https://example.com/laxante.jpg",
+    "stock": 100
   },
   {
     "id": 36,
@@ -321,7 +356,8 @@
     "precio": 540,
     "categoria": ["Dermatología", "Natural"],
     "fabricante": "Organika",
-    "imagenUrl": "https://example.com/teatreecream.jpg"
+    "imagenUrl": "https://example.com/teatreecream.jpg",
+    "stock": 55
   },
   {
     "id": 37,
@@ -330,7 +366,8 @@
     "precio": 290,
     "categoria": ["Respiratorio", "Natural"],
     "fabricante": "Sanavita",
-    "imagenUrl": "https://example.com/gargantapastillas.jpg"
+    "imagenUrl": "https://example.com/gargantapastillas.jpg",
+    "stock": 130
   },
   {
     "id": 38,
@@ -339,7 +376,8 @@
     "precio": 370,
     "categoria": ["Respiratorio"],
     "fabricante": "Vick",
-    "imagenUrl": "https://example.com/spraynasa.jpg"
+    "imagenUrl": "https://example.com/spraynasa.jpg",
+    "stock": 120
   },
   {
     "id": 39,
@@ -348,7 +386,8 @@
     "precio": 610,
     "categoria": ["Dermatología", "Rehabilitación"],
     "fabricante": "Eucerin",
-    "imagenUrl": "https://example.com/piescrema.jpg"
+    "imagenUrl": "https://example.com/piescrema.jpg",
+    "stock": 80
   },
   {
     "id": 40,
@@ -357,7 +396,8 @@
     "precio": 390,
     "categoria": ["Oftalmología"],
     "fabricante": "Optrex",
-    "imagenUrl": "https://example.com/solucionoftalmica.jpg"
+    "imagenUrl": "https://example.com/solucionoftalmica.jpg",
+    "stock": 60
   },
   {
     "id": 41,
@@ -366,7 +406,8 @@
     "precio": 620,
     "categoria": ["Dermatología", "Higiene"],
     "fabricante": "Bioderma",
-    "imagenUrl": "https://example.com/micelar.jpg"
+    "imagenUrl": "https://example.com/micelar.jpg",
+    "stock": 100
   },
   {
     "id": 42,
@@ -375,7 +416,8 @@
     "precio": 150,
     "categoria": ["Primeros Auxilios"],
     "fabricante": "Curitas",
-    "imagenUrl": "https://example.com/tiritas.jpg"
+    "imagenUrl": "https://example.com/tiritas.jpg",
+    "stock": 200
   },
   {
     "id": 43,
@@ -384,7 +426,8 @@
     "precio": 890,
     "categoria": ["Dermatología", "Bienestar"],
     "fabricante": "Capilatis",
-    "imagenUrl": "https://example.com/suerocapilar.jpg"
+    "imagenUrl": "https://example.com/suerocapilar.jpg",
+    "stock": 70
   },
   {
     "id": 44,
@@ -393,7 +436,8 @@
     "precio": 670,
     "categoria": ["Suplementos"],
     "fabricante": "Now Foods",
-    "imagenUrl": "https://example.com/magnesio.jpg"
+    "imagenUrl": "https://example.com/magnesio.jpg",
+    "stock": 115
   },
   {
     "id": 45,
@@ -402,7 +446,8 @@
     "precio": 190,
     "categoria": ["Respiratorio", "Prevención"],
     "fabricante": "Mentholatum",
-    "imagenUrl": "https://example.com/inhalador.jpg"
+    "imagenUrl": "https://example.com/inhalador.jpg",
+    "stock": 190
   },
   {
     "id": 46,
@@ -411,7 +456,8 @@
     "precio": 510,
     "categoria": ["Higiene", "Ginecología"],
     "fabricante": "Asepxia",
-    "imagenUrl": "https://example.com/intimogel.jpg"
+    "imagenUrl": "https://example.com/intimogel.jpg",
+    "stock": 85
   },
   {
     "id": 47,
@@ -420,7 +466,8 @@
     "precio": 430,
     "categoria": ["Gastrointestinal"],
     "fabricante": "Rennie",
-    "imagenUrl": "https://example.com/antiacidez.jpg"
+    "imagenUrl": "https://example.com/antiacidez.jpg",
+    "stock": 100
   },
   {
     "id": 48,
@@ -429,7 +476,8 @@
     "precio": 610,
     "categoria": ["Dermatología"],
     "fabricante": "Eucerin",
-    "imagenUrl": "https://example.com/cremanos.jpg"
+    "imagenUrl": "https://example.com/cremanos.jpg",
+    "stock": 90
   },
   {
     "id": 49,
@@ -438,7 +486,8 @@
     "precio": 180,
     "categoria": ["Sueño", "Prevención"],
     "fabricante": "3M",
-    "imagenUrl": "https://example.com/tapones.jpg"
+    "imagenUrl": "https://example.com/tapones.jpg",
+    "stock": 220
   },
   {
     "id": 50,
@@ -447,10 +496,9 @@
     "precio": 580,
     "categoria": ["Rehabilitación", "Higiene"],
     "fabricante": "Dr. Scholl",
-    "imagenUrl": "https://example.com/piesantiseptico.jpg"
+    "imagenUrl": "https://example.com/piesantiseptico.jpg",
+    "stock": 60
   }
 ]
 
-
-
-
+  

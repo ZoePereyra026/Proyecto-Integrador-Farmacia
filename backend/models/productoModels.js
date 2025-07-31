@@ -30,6 +30,12 @@ const productoSchema = new mongoose.Schema({
   imagenUrl: {
     type: String,
     default: ""
+  },
+  stock: {
+    type: Number,
+    required: true,
+    default: 0,
+    min: 0
   }
 });
 

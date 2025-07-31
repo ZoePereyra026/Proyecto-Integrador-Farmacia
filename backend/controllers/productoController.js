@@ -37,7 +37,8 @@ const crearProducto = async (req, res) => {
       precio,
       categoria,
       fabricante,
-      imagen_url
+      imagen_url,
+      stock
     } = req.body;
 
     // Verificar que todos los campos sean obligatorios
@@ -48,9 +49,10 @@ const crearProducto = async (req, res) => {
       !precio ||
       !categoria ||
       !fabricante ||
-      !imagen_url
+      !imagen_url ||
+      stock === undefined
     ) {
-      return res
+      return res 
         .status(400)
         .json({ error: "Todos los campos son obligatorios para crear un producto." });
     }
@@ -68,7 +70,8 @@ const crearProducto = async (req, res) => {
       precio,
       categoria,
       fabricante,
-      imagen_url
+      imagen_url,
+      stock
     });
 
     await nuevoProducto.save();
@@ -184,6 +187,31 @@ const obtenerProductosPorRangoPrecio = async (req, res) => {
   }
 };
 
+// Actualizar solo el stock de un producto determinado solo por su ID
+const actualizarStockProducto = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { stock } = req.body;
+
+    if (stock === undefined || typeof stock !== "number" || stock < 0) {
+      return res.status(400).json({ error: "El campo 'stock' debe ser un número (no negativo)." });
+    }
+
+    const producto = await Producto.findOneAndUpdate(
+      { id: parseInt(id) },
+      { stock },
+      { new: true }
+    );
+
+    if (!producto) {
+      return res.status(404).json({ mensaje: "El Producto no ha sido encontrado." });
+    }
+
+    res.json({ mensaje: "El Stock del producto ha sido actualizado correctamente.", producto });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
 module.exports = {
   obtenerProductosPorCategoria,
@@ -193,5 +221,6 @@ module.exports = {
   actualizarProducto,
   eliminarProducto,
   obtenerProductosPorFabricante,
-  obtenerProductosPorRangoPrecio
+  obtenerProductosPorRangoPrecio,
+  actualizarStockProducto
 };

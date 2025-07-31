@@ -27,4 +27,7 @@ router.get("/filtrar/fabricante", productoController.obtenerProductosPorFabrican
 // Buscar productos por rango de precio
 router.get("/filtrar/precio", productoController.obtenerProductosPorRangoPrecio); // Si funciona
 
+// Actualizar solo el stock de un producto por su ID
+router.put("/stock/:id", productoController.actualizarStockProducto);
+
 module.exports = router;

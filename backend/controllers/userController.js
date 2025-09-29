@@ -2,7 +2,7 @@ const Usuario = require("../models/userModels");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
-// 🔐 Función para generar el token
+// Función para generar el token
 const crearToken = (usuario) => {
   return jwt.sign(
     { id: usuario._id, role: usuario.role },
@@ -94,7 +94,25 @@ const loginUser = async (req, res) => {
   }
 };
 
+// Obtener datos del usuario logueado (GET /api/usuarios/me)
+const getMe = async (req, res) => {
+  try {
+    // el middleware Auth debe haber puesto req.user = { id, role, ... }
+    const userId = req.user && req.user.id;
+    if (!userId) return res.status(401).json({ error: "No autorizado" });
+
+    const usuario = await Usuario.findById(userId).select("-password");
+    if (!usuario) return res.status(404).json({ error: "Usuario no encontrado" });
+
+    return res.json({ usuario });
+  } catch (err) {
+    console.error("Error en getMe:", err);
+    return res.status(500).json({ error: "Error interno" });
+  }
+};
+
 module.exports = {
   registerUser,
-  loginUser
+  loginUser,
+  getMe
 };

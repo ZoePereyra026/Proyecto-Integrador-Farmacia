@@ -8,7 +8,7 @@ const verificarToken = (req, res, next) => {
 
   try {
     const verificado = jwt.verify(token, process.env.JWT_SECRET);
-    req.usuario = verificado;
+    req.user = verificado; // usar `req.user` (consistente)
     next();
   } catch (error) {
     res.status(401).json({ error: "Token inválido" });
@@ -17,8 +17,11 @@ const verificarToken = (req, res, next) => {
 
 const verificarRol = (rolRequerido) => {
   return (req, res, next) => {
-    const usuario = req.usuario;
-    if (usuario.rol !== rolRequerido) {
+    const usuario = req.user;
+    if (!usuario) return res.status(401).json({ error: "No autenticado" });
+
+    // Asegurarse que el payload tenga `role` (no `rol`)
+    if (usuario.role !== rolRequerido) {
       return res.status(403).json({ error: "Acceso no autorizado" });
     }
     next();

@@ -161,3 +161,68 @@ body {
   text-align: center;
   font-size: 14px;
 }
+
+/* Detalles de los productos */
+@media (max-width: 768px) {
+  .detalle-container {
+    flex-direction: column;
+    padding: 20px;
+    margin: 80px;
+    gap: 30px;
+  }
+
+  .galeria,
+  .info-producto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .imagen-principal {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .miniaturas {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .miniaturas img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .info-producto h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .precio,
+  .descripcion {
+    text-align: center;
+  }
+
+  .fila-cantidad {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contenedor-boton {
+    justify-content: center;
+  }
+
+  .agregar-carrito {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .info-producto p.categoria,
+  .info-producto p.laboratorio {
+    text-align: center;
+    font-size: 15px;
+    color: #444;
+    margin: 100px;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.5"
+  },
+  "name": "proyecto-integrador-farmacia",
+  "version": "1.0.0",
+  "description": "- Aguirre Matias - Pereyra Zoe - Sadir Martin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinSadir21/Proyecto-Integrador-Farmacia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/martinSadir21/Proyecto-Integrador-Farmacia/issues"
+  },
+  "homepage": "https://github.com/martinSadir21/Proyecto-Integrador-Farmacia#readme"
+}

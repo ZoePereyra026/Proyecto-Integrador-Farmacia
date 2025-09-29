@@ -74,78 +74,17 @@
 
       <!-- PRODUCTOS -->
       <section class="col-md-9">
-        <div class="row g-4">
-          <!-- Producto 1 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="img/paracetamol.jpg" class="card-img-top" alt="Paracetamol">
-              <div class="card-body text-center">
-                <h5 class="card-title">Paracetamol 500mg</h5>
-                <p class="text-success fw-bold">$800</p>
-                <a href="producto.html" class="btn btn-outline-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 2 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="img/jabon.jpg" class="card-img-top" alt="Jabón">
-              <div class="card-body text-center">
-                <h5 class="card-title">Jabón Neutro</h5>
-                <p class="text-success fw-bold">$650</p>
-                <a href="producto.html" class="btn btn-outline-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 3 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="img/protector-solar.jpg" class="card-img-top" alt="Protector">
-              <div class="card-body text-center">
-                <h5 class="card-title">Protector Solar FPS 50</h5>
-                <p class="text-success fw-bold">$2200</p>
-                <a href="producto.html" class="btn btn-outline-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 4 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="img/curitas.jpg" class="card-img-top" alt="Curitas">
-              <div class="card-body text-center">
-                <h5 class="card-title">Curitas Adhesivas x 20</h5>
-                <p class="text-success fw-bold">$550</p>
-                <a href="producto.html" class="btn btn-outline-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 5 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="img/shampoo.jpg" class="card-img-top" alt="Shampoo">
-              <div class="card-body text-center">
-                <h5 class="card-title">Shampoo Anticaspa</h5>
-                <p class="text-success fw-bold">$1200</p>
-                <a href="producto.html" class="btn btn-outline-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 6 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="img/vitamina-c.jpg" class="card-img-top" alt="Vitamina C">
-              <div class="card-body text-center">
-                <h5 class="card-title">Vitamina C 1000mg</h5>
-                <p class="text-success fw-bold">$980</p>
-                <a href="producto.html" class="btn btn-outline-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
+        <div id="listado-productos" class="row g-4">
+          <!-- Aquí se renderizan los productos dinámicamente -->
         </div>
       </section>
-    </div>
-  </div>
+
+      <div class="text-center mt-4">
+        <button id="verMas" class="btn btn-success me-2">Ver más</button>
+        <button id="verMenos" class="btn btn-secondary">Ver menos</button>
+      </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/productos.js"></script>
 </body>
 </html>

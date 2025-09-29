@@ -4,7 +4,6 @@
   --verde-suave: #61c286;
 }
 
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -83,7 +82,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--azul-profundo);
 }
 
 .descripcion {
@@ -95,13 +94,13 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin: 15px 0px;
+  margin: 15px 0;
 }
 
 .etiqueta-cantidad {
   font-weight: bold;
   font-size: 16px;
-  color: #333;
+  color: #555;
 }
 
 .cantidad-elegante {
@@ -130,7 +129,7 @@ body {
   width: 32px;
   text-align: center;
   font-weight: 500;
-  color: #333;
+  color: black;
 }
 
 .contenedor-boton {
@@ -163,61 +162,30 @@ body {
   font-size: 14px;
 }
 
-/*Diseño Responsive*/
-
-/* Dispositivos hasta 768px */
+/* Detalles de los productos */
 @media (max-width: 768px) {
   .detalle-container {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 20px;
-    gap: 25px;
-    width: 60%;
+    margin: 80px;
+    gap: 30px;
   }
 
-  .miniaturas img{
-    width: 80px;
-    height: 80px;
+  .galeria,
+  .info-producto {
+    width: 100%;
+    max-width: 100%;
   }
 
-  .imagen-principal, .info-producto {
-    width: 75%;
-    text-align: left;
-  }
-
-  .navbar-brand {
-    margin-left: 60px;
-    justify-content: left;
-  }
-
-  .info-producto h1 {
-    font-size: 20px;
-  }
-
-  .precio {
-    font-size: 20px;
-  }
-
-  .descripcion {
-    font-size: 14px;
-  }
-
-  .fila-cantidad {
-    justify-content: left;
-    flex-wrap: wrap;
-  }
-
-  .contenedor-boton {
-    justify-content: center;
-  }
-}
-
-/* Dispositivos hasta 450px */
-@media (max-width: 450px) {
   .imagen-principal {
-    width: 90%;
-    max-width: 250px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .miniaturas {
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   .miniaturas img {
@@ -225,23 +193,37 @@ body {
     height: 60px;
   }
 
-  .btn-cantidad {
-    width: 32px;
-    height: 32px;
-    font-size: 18px;
+  .info-producto h1 {
+    font-size: 20px;
+    text-align: center;
   }
 
-  .valor-cantidad {
-    font-size: 16px;
+  .precio,
+  .descripcion {
+    text-align: center;
+  }
+
+  .fila-cantidad {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contenedor-boton {
+    justify-content: center;
   }
 
   .agregar-carrito {
     width: 100%;
-    font-size: 15px;
-    padding: 12px 0;
+    max-width: 300px;
   }
 
-  .navbar-brand span {
-    font-size: 16px;
+  .info-producto p.categoria,
+  .info-producto p.laboratorio {
+    text-align: center;
+    font-size: 15px;
+    color: #444;
+    margin: 100px;
   }
 }
+

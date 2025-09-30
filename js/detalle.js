@@ -5,6 +5,25 @@ function obtenerParametroGET(nombreParametro) {
     return valor ? valor.trim() : null;
 }
 
+//Carrito (LocalStorage)
+function getCart() {
+  try { return JSON.parse(localStorage.getItem("cart")) || []; }
+  catch { return []; }
+}
+function saveCart(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+function addToCart(producto, qty = 1) {
+  const cart = getCart();
+  const idx = cart.findIndex(i => i.id === producto.id);
+  if (idx >= 0) {
+    cart[idx].qty += qty;
+  } else {
+    cart.push({ ...producto, qty });
+  }
+  saveCart(cart);
+}
+
 let productos = [];
 
 const cargarDatos = async () => {
@@ -66,6 +85,42 @@ const mostrarInfoProducto = (producto) => {
     infoProducto.insertBefore(laboratorioElemento, filaCantidad);
 
     if (miniaturas) miniaturas.innerHTML = '';
+    // Cantidad (+ / −) y Agregar al carrito
+    const cantidadBox = document.querySelector('.cantidad-elegante');
+    const valorCantidad = cantidadBox?.querySelector('.valor-cantidad');
+    const btnMas = cantidadBox?.querySelector('.btn-cantidad.plus, .plus');
+    const btnMenos = cantidadBox?.querySelector('.btn-cantidad.minus, .minus');
+    const btnAgregar = document.querySelector('.agregar-carrito'); // botón en tu HTML
+
+    // Inicial
+    if (valorCantidad && !/^\d+$/.test(valorCantidad.textContent.trim())) {
+      valorCantidad.textContent = "1";
+    }
+
+    // Sumar/restar
+    btnMas?.addEventListener('click', () => {
+      const actual = parseInt(valorCantidad.textContent, 10) || 1;
+      if (actual < 99) valorCantidad.textContent = String(actual + 1);
+    });
+    btnMenos?.addEventListener('click', () => {
+      const actual = parseInt(valorCantidad.textContent, 10) || 1;
+      if (actual > 1) valorCantidad.textContent = String(actual - 1);
+    });
+
+    // Agregar al carrito
+    btnAgregar?.addEventListener('click', () => {
+      const qty = Math.max(1, parseInt(valorCantidad?.textContent || "1", 10) || 1);
+
+      const item = {
+        id: producto.id,                 
+        name: producto.nombre,           
+        price: Number(producto.precio),  
+        image: producto.imagenUrl        
+      };
+
+      addToCart(item, qty);
+      alert("Producto agregado al carrito ✅");
+});
 };
 
 const mostrarMensajeError = (mensaje) => {

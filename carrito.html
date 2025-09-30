@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style_carrito.css" />
 </head>
 <body>
-   <!-- NAVBAR -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
     <div class="container">
       <a class="navbar-brand fw-bold text-success" href="index.html">
@@ -17,92 +17,32 @@
     </div>
   </nav>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="carrito-container">
-    <h1> Carrito de Compras </h1>
+    <h1>Carrito de Compras</h1>
 
-    <div class="producto">
-        <img src="https://www.farmaciassanchezantoniolli.com.ar/10123-medium_default/tafirol-x30-comp.jpg" alt="Producto 1">
-        <div class="info">
-        <h3>Paracetamol 500mg</h3>
-        <p class="precio-unitario"><strong>Precio:</strong> $500</p>
-            <div class="bloque-cantidad">
-                <span class="etiqueta-cantidad"><strong>Cantidad:</strong></span>
-                <div class="cantidad-elegante">
-                    <button class="btn-cantidad minus">−</button>
-                    <span class="valor-cantidad">1</span>
-                    <button class="btn-cantidad plus">+</button>
-                </div>
-            </div>
-        <p class="precio-total"><strong>Total:</strong> $1.000</p>
-        </div>
-    </div>
+    <!-- Contenedor que se llena dinámicamente con JS -->
+    <div id="cartList"></div>
 
-    <div class="producto">
-        <img src="https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x250-ml-alcohol-en-gel-77912742002431-3fe19bb1061aa7eda916487618099237-1024-1024.png" alt="Producto 2">
-        <div class="info">
-        <h3>Protector Solar FPS 50</h3>
-        <p class="precio-unitario"><strong>Precio:</strong> $750</p>
-            <div class="bloque-cantidad">
-                <span class="etiqueta-cantidad"><strong>Cantidad:</strong></span>
-                <div class="cantidad-elegante">
-                    <button class="btn-cantidad minus">−</button>
-                    <span class="valor-cantidad">1</span>
-                    <button class="btn-cantidad plus">+</button>
-                </div>
-            </div>
-        <p class="precio-total"><strong>Total:</strong> $750</p>
-        </div>
-    </div>
-
-    <div class="producto">
-        <img src="https://www.farmacialeloir.com.ar/img/articulos/2023/12/dermaglos_protector_solar_fps30_emulsion_imagen1.jpg" alt="Producto 3">
-        <div class="info">
-        <h3>Protector Solar FPS 50</h3>
-        <p class="precio-unitario"><strong>Precio:</strong> $2.200</p>
-            <div class="bloque-cantidad">
-                <span class="etiqueta-cantidad"><strong>Cantidad:</strong></span>
-                <div class="cantidad-elegante">
-                    <button class="btn-cantidad minus">−</button>
-                    <span class="valor-cantidad">1</span>
-                    <button class="btn-cantidad plus">+</button>
-                </div>
-            </div>
-        <p class="precio-total"><strong>Total:</strong> $44.000</p>
-        </div>
-    </div>
-
+    <!-- Totales -->
     <div class="total">
-            <p>Subtotal: $45.750</p>
-            <h2>Total: $45.750</h2>
-            <a href="#" class="boton-pago">Proceder al Pago</a>
-    </div>
-    </div>
+      <p>Subtotal: <span id="cartSubtotal">$0,00</span></p>
+      <h2>Total: <span id="cartTotal">$0,00</span></h2>
+      <div class="acciones">
+        <button id="btnClearCart" class="boton-secundario">Vaciar carrito</button>
+        <button id="btnCheckout" class="boton-pago">Proceder al Pago</button>
+      </div>
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="bg-light border-top py-4">
     <div class="container text-center text-muted">
       <p class="mb-1">&copy; 2025 Farmacia San Martín - Jujuy</p>
     </div>
   </footer>
 
-    <script>
-    document.querySelectorAll('.cantidad-elegante').forEach(cantidadBox => {
-        const valorSpan = cantidadBox.querySelector('.valor-cantidad');
-        const btnMas = cantidadBox.querySelector('.plus');
-        const btnMenos = cantidadBox.querySelector('.minus');
-
-        btnMas.addEventListener('click', () => {
-        let cantidad = parseInt(valorSpan.textContent);
-        if (cantidad < 99) valorSpan.textContent = cantidad + 1;
-        });
-
-        btnMenos.addEventListener('click', () => {
-        let cantidad = parseInt(valorSpan.textContent);
-        if (cantidad > 1) valorSpan.textContent = cantidad - 1;
-        });
-    });
-    </script>
-
+  <!-- Script de carrito.js -->
+  <script type="module" src="./js/carrito.js"></script>
 </body>
 </html>

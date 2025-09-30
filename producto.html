@@ -52,23 +52,6 @@
     </div>
   </footer>
 
-  <script>
-    const cantidadBox = document.querySelector('.cantidad-elegante');
-    const valorSpan = cantidadBox.querySelector('.valor-cantidad');
-    const btnMas = cantidadBox.querySelector('.btn-cantidad.plus');
-    const btnMenos = cantidadBox.querySelector('.btn-cantidad.minus');
-
-    btnMas.addEventListener('click', () => {
-      let actual = parseInt(valorSpan.textContent);
-      if (actual < 99) valorSpan.textContent = actual + 1;
-    });
-
-    btnMenos.addEventListener('click', () => {
-      let actual = parseInt(valorSpan.textContent);
-      if (actual > 1) valorSpan.textContent = actual - 1;
-    });
-  </script>
-
   <script type="module" src="./js/detalle.js"></script>
 </body>
 </html>

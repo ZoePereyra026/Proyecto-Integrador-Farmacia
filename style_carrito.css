@@ -1,0 +1,260 @@
+:root {
+  --celeste: #00AEEF;
+  --azul-profundo: #0098d3;
+  --verde-suave: #61c286;
+  
+}
+
+.navbar {
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #61c286;
+  margin-left: 100px;
+  padding: 5px;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* Enlaces activos o destacados */
+.nav-link.active,
+.nav-link:hover {
+  color: #00AEEF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #61c286;
+}
+
+.carrito-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  margin-bottom: 80px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--azul-profundo);
+  margin-bottom: 20px;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 30px 20px 30px;
+}
+
+.producto img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.info h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.precio-unitario,
+.precio-total {
+  color: #555;
+  margin: 5px 0;
+}
+
+.boton-pago {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--verde-suave);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.total {
+  text-align: right;
+  margin: 50px 30px 20px 0;
+}
+
+.total p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.total h2 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #0098d3;
+}
+
+footer {
+  background-color: white; 
+  border-top: 1px solid #ddd; 
+  padding: 1.5rem 0; 
+  color: grey;
+  text-align: center; 
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  margin-bottom: 0.25rem; 
+}
+
+.fila-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.etiqueta-cantidad {
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
+}
+
+.cantidad-elegante {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0px 20px 0px;
+}
+
+.btn-cantidad {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-cantidad:hover {
+  background-color: var(--verde-suave);
+}
+
+.valor-cantidad {
+  width: 32px;
+  text-align: center;
+  font-weight: 500;
+  color: black;
+}
+
+/*Diseño Responsive*/
+
+/* Dispositivos hasta 768px */
+@media (max-width: 768px) {
+  .carrito-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carrito-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 65%;
+  }
+
+  .producto {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .producto img {
+    margin: 15px;
+  }
+
+  .total {
+    text-align: right;
+    margin: 30px 20px;
+  }
+
+  .boton-pago {
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .navbar-brand {
+    margin-left: 60px;
+    justify-content: left;
+  }
+}
+
+/* Dispositivos hasta 450px */
+@media (max-width: 450px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .producto img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info h3 {
+    font-size: 16px;
+  }
+
+  .precio-unitario,
+  .precio-total {
+    font-size: 14px;
+  }
+
+  .btn-cantidad {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .valor-cantidad {
+    font-size: 16px;
+  }
+
+  .navbar-brand {
+    font-size: 16px;
+    margin-left: 5px;
+    justify-content: left;
+  }
+
+  .total {
+    text-align: center;
+    margin: 30px 20px;
+  }
+
+  .boton-pago {
+    text-align: center;
+    padding: 15px 20px;
+  }
+}
+
+

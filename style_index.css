@@ -1,0 +1,43 @@
+/* Fondo HERO con celeste */
+.hero-section {
+  background-color: 	#61c286; 
+  color: white;
+  
+}
+
+/* Botones principales */
+.btn-primary {
+  background-color: #00AEEF;
+  border-color: #00AEEF;
+}
+
+.btn-primary:hover {
+  background-color: #0098d3;
+  border-color: #0098d3;
+}
+
+/* Enlaces activos o destacados */
+.nav-link.active,
+.nav-link:hover {
+  color: #00AEEF;
+}
+
+/* Tarjetas de productos con sombra leve */
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+/* Títulos o íconos destacados en verde */
+.text-acento-verde {
+  color: #36C48E;
+}
+
+.productos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  background-color: #61c286;
+}

@@ -1,0 +1,52 @@
+/* Fondo personalizado para ambas páginas */
+body.bg-custom {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #61c286;
+}
+
+/* Formulario centrado y ancho máximo */
+.form-signin {
+  max-width: 350px;
+  padding: 15px;
+  margin: auto;
+}
+
+/* Logo con tamaño estándar */
+.form-signin .logo {
+  width: 220px;
+  height: auto;
+}
+
+/* Personalización de campos de formulario si querés */
+.form-control:focus {
+  border-color: #198754; /* Verde Bootstrap */
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.btn-primary:hover {
+  background-color: #157347;
+  border-color: #146c43;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.5);
+}
+
+/* Enlaces */
+a {
+  color: #0a3622;
+}
+
+a:hover {
+  color: #05361d;
+  text-decoration: underline;
+}

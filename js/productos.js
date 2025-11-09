@@ -44,7 +44,7 @@ const renderizarProductos = () => {
         <div class="card-body text-center">
           <h5 class="card-title">${producto.nombre}</h5>
           <p class="text-success fw-bold">$${producto.precio}</p>
-          <a href="producto.html?id=${producto.id}" class="btn btn-outline-primary btn-sm">Ver más detalles</a>
+          <a href="producto.html?id=${producto.id}" class="btn btn-outline-primary btn-sm card-img-top img-producto" class="card-img-top img-producto" >Ver más detalles</a>
         </div>
       </div>
     `;

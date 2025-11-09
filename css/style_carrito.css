@@ -2,7 +2,6 @@
   --celeste: #00AEEF;
   --azul-profundo: #0098d3;
   --verde-suave: #61c286;
-  
 }
 
 .navbar {
@@ -10,19 +9,41 @@
   padding: 10px 20px;
 }
 
-.navbar-brand {
+.navbar-brand{
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
   color: #61c286;
-  margin-left: 100px;
+  margin-left: 20px;
   padding: 5px;
 }
 
 .navbar-brand img {
   margin-right: 10px;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#botonCatalogoHeader {
+  display: flex;
+  align-items: center;
+}
+
+#btn_medio {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00AEEF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 /* Enlaces activos o destacados */
@@ -213,14 +234,15 @@ button.remove:hover,
 }
 
 .btn-volver {
-  display: inline-block;
-  margin-top: 20px;
+  display: flex;
+  justify-content: right;
   padding: 10px 20px;
-  background-color: var(--celeste);
+  background-color: #00AEEF;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  font-size: 15px;
   transition: background-color 0.3s ease;
 }
 
@@ -228,9 +250,9 @@ button.remove:hover,
   background-color: #4fc7ec;
 }
 
+
 /*Diseño Responsive*/
 
-/* Dispositivos hasta 768px */
 @media (max-width: 768px) {
   .carrito-wrapper {
     display: flex;

@@ -5,12 +5,18 @@
   --verde-suave: #61c286;
 }
 
+html, body {
+  height: 100%;
+}
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--verde-suave);
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -38,7 +44,7 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   padding: 20px;
-  max-width: 600px;       
+  max-width: 750px;       
   width: 100%;            
   margin: 40px auto 20px auto;
   background: #fff;
@@ -46,6 +52,8 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   align-items: flex-start;
   box-sizing: border-box;
+  margin-bottom: 100px;
+  margin-top: 100px
 }
 
 .galeria {
@@ -75,6 +83,8 @@ body {
 
 .info-producto {
   flex: 1;
+  align-items: center;
+  margin-top: 75px;
 }
 
 .info-producto h1 {
@@ -242,12 +252,14 @@ body {
     padding: 20px;
     margin: 20px auto;
     gap: 30px;
+    width: 400px;
   }
 
   .galeria,
   .info-producto {
     width: 100%;
     max-width: 100%;
+    margin-top: 0px;
   }
 
   .imagen-principal {

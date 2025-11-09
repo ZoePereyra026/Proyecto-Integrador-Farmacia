@@ -8,8 +8,9 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const mostrarBuscador = location.pathname === '/productos';
-
+  const mostrarBuscador =
+  location.pathname === '/productos';
+  
   useEffect(() => {
     try {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -34,7 +35,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img src="/img/logo.png" alt="Logo" width="30" className="me-2" />
+          <img src="../public/img/logo.png" alt="Logo" width="30" className="me-2" />
           <span className="fw-bold text-success">Farmacia San Martín</span>
         </Link>
 

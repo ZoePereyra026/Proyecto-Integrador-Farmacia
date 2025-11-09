@@ -1,0 +1,62 @@
+.tarjeta-carrucel {
+  width: 280px;
+  height: 380px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center; 
+}
+
+.tarjeta-carrucel:hover {
+  transform: translateY(-4px);
+}
+
+.tarjeta-carrucel img {
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-carrucel h5 {
+  font-size: 1rem;
+  line-height: 1.2;
+  min-height: 2.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.25rem;
+}
+
+.tarjeta-carrucel p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #28a745; 
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .tarjeta-carrucel {
+    width: 100%;
+    max-width: 280px;
+    height: 360px;
+  }
+
+  .tarjeta-carrucel img {
+    height: 160px;
+  }
+
+  .tarjeta-carrucel h5,
+  .tarjeta-carrucel p {
+    font-size: 1rem;
+  }
+}

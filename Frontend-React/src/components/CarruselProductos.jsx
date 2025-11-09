@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useProductos from '../hooks/useProductos';
 import TarjetaCarrucel from './TarjetaCarrucel';
+import '/css/style_carrucel.css';
 
 export default function CarrucelProductos() {
   const productos = useProductos() || [];
   const [inicio, setInicio] = useState(0);
-  const cantidadVisible = 3;
+  const [cantidadVisible, setCantidadVisible] = useState(3);
   const total = productos.length;
 
-  // Evitar render si no hay productos
+  useEffect(() => {
+    const actualizarCantidad = () => {
+      const ancho = window.innerWidth;
+      if (ancho < 768) {
+        setCantidadVisible(1);
+      } else if (ancho < 992) {
+        setCantidadVisible(2);
+      } else {
+        setCantidadVisible(3);
+      }
+    };
+
+    actualizarCantidad();
+    window.addEventListener('resize', actualizarCantidad);
+    return () => window.removeEventListener('resize', actualizarCantidad);
+  }, []);
+
   if (total === 0) {
     return <div className="text-center py-5">Cargando productos...</div>;
   }
@@ -22,7 +39,6 @@ export default function CarrucelProductos() {
     setInicio((inicio - 1 + total) % total);
   };
 
-  // Generar productos visibles con envoltura circular
   const productosVisibles = [];
   for (let i = 0; i < cantidadVisible; i++) {
     const index = (inicio + i) % total;
@@ -30,33 +46,22 @@ export default function CarrucelProductos() {
   }
 
   return (
-    <section className="py-5">
+    <section className="py-5 carrucel-productos">
       <div className="container">
         <h2 className="text-center mb-4">Productos de la Farmacia</h2>
 
-        <div
-          className="d-flex align-items-center justify-content-center mx-auto"
-          style={{ maxWidth: '1080px' }}
-        >
-          <button
-            className="btn btn-outline-primary me-3"
-            onClick={mostrarAnterior}
-            style={{ height: '100%' }}
-          >
+        <div className="carrucel-wrapper">
+          <button className="btn btn-outline-primary flecha flecha-izquierda" onClick={mostrarAnterior}>
             <i className="fas fa-chevron-left"></i>
           </button>
 
-          <div className="d-flex justify-content-center gap-4">
+          <div className="carrucel-items">
             {productosVisibles.map((producto) => (
               <TarjetaCarrucel key={producto.id} producto={producto} />
             ))}
           </div>
 
-          <button
-            className="btn btn-outline-primary ms-3"
-            onClick={mostrarSiguiente}
-            style={{ height: '100%' }}
-          >
+          <button className="btn btn-outline-primary flecha flecha-derecha" onClick={mostrarSiguiente}>
             <i className="fas fa-chevron-right"></i>
           </button>
         </div>

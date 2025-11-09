@@ -5,16 +5,23 @@ export default function Navbar() {
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const totalItems = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
-    setCartCount(totalItems);
+    try {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const totalItems = Array.isArray(cart)
+        ? cart.reduce((acc, item) => acc + (item.qty || 1), 0)
+        : 0;
+      setCartCount(totalItems);
+    } catch (error) {
+      console.error("Error leyendo carrito:", error);
+      setCartCount(0);
+    }
   }, []);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <div className="container">
         <Link className="navbar-brand fw-bold text-success d-flex align-items-center" to="/">
-          <img src="../img/logo.png" alt="Logo" width="30" className="me-2" />
+          <img src="/img/logo.png" alt="Logo" width="30" className="me-2" />
           Farmacia San Martín
         </Link>
 
@@ -35,7 +42,7 @@ export default function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item d-flex align-items-center">
               <Link className="nav-link position-relative" to="/carrito">
-                <div style={{ position: 'relative', paddingTop: '4px' }}>
+                <div style={{ position: 'relative', paddingTop: '4px', minWidth: '32px' }}>
                   <i
                     className="fas fa-shopping-cart"
                     style={{ color: "#00AEEF", fontSize: '1.2rem' }}
@@ -43,7 +50,16 @@ export default function Navbar() {
                   <span
                     id="contadorCarrito"
                     className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
-                    style={{ fontSize: '0.75rem' }}
+                    style={{
+                      fontSize: '0.75rem',
+                      minWidth: '18px',
+                      height: '18px',
+                      padding: '0 6px',
+                      display: 'inline-block',
+                      textAlign: 'center',
+                      lineHeight: '18px',
+                      whiteSpace: 'nowrap'
+                    }}
                   >
                     {cartCount}
                   </span>

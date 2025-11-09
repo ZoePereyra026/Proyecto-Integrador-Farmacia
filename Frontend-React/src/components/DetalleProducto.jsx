@@ -32,7 +32,6 @@ export default function DetalleProducto() {
     localStorage.setItem('cart', JSON.stringify(carrito));
     alert('Producto agregado al carrito');
 
-    // 🔄 Recargar la página para actualizar el contador
     window.location.reload();
   };
 

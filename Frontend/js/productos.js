@@ -5,7 +5,7 @@ let cantidadVisible = 9;
 // Cargar productos desde archivo JSON
 const cargarProductos = async () => {
   try {
-    const respuesta = await fetch('./backend/data/producto.json');
+    const respuesta = await fetch('../backend/data/producto.json');
     if (!respuesta.ok) throw new Error('Archivo no encontrado');
     const datosRespuesta = await respuesta.json();
     productos = datosRespuesta;

@@ -35,7 +35,7 @@ let productos = [];
 
 const cargarDatos = async () => {
   try {
-    const respuesta = await fetch('./backend/data/producto.json');
+    const respuesta = await fetch('../backend/data/producto.json');
     if (!respuesta.ok) throw new Error('Archivo no encontrado');
 
     const datos = await respuesta.json();

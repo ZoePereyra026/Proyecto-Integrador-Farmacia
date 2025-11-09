@@ -250,10 +250,26 @@ button.remove:hover,
   background-color: #4fc7ec;
 }
 
+.volver-catalogo-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
 
 /*Diseño Responsive*/
-
 @media (max-width: 768px) {
+  .volver-catalogo-wrapper {
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  .btn-volver {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
   .carrito-wrapper {
     display: flex;
     justify-content: center;

@@ -110,8 +110,16 @@ const inicializarBuscador = () => {
   inputBusqueda.addEventListener("input", aplicarFiltros); 
 };
 
+const actualizarContadorCarrito = () => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const totalItems = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
+  const contador = document.getElementById("contadorCarrito");
+  if (contador) contador.textContent = totalItems;
+};
+
 // Inicializar al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Inicio de carga de productos');
   cargarProductos();
+  actualizarContadorCarrito();
 });

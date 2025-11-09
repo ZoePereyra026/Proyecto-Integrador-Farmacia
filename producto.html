@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style_producto.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body style="background-color: #61c286;">
+<body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
@@ -23,14 +23,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <form class="d-flex mx-auto" role="search">
-          <input class="form-control me-2" type="search" name="q" placeholder="¿Qué estás buscando?" aria-label="Buscar" />
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        <form class="buscador-wrapper d-flex flex-wrap justify-content-center gap-2 my-2" role="search">
+          <input class="form-control buscador" type="search" name="q" placeholder="¿Qué estás buscando?" aria-label="Buscar">
+          <button class="btn btn-success" type="submit">Buscar</button>
         </form>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item position-relative me-3">
-            <a class="nav-link carrito-icono" href="carrito.html">
-              <i class="fas fa-shopping-cart"></i>
+          <li class="nav-item me-3">
+            <a class="nav-link position-relative" href="carrito.html">
+              <i class="fas fa-shopping-cart" id="iconoCarrito"></i>
               <span id="contadorCarrito">0</span>
             </a>
           </li>
@@ -47,14 +47,9 @@
     <div class="detalle-container">
       <div class="galeria">
         <img class="imagen-principal" src="" alt="Imagen del producto" />
-
-        <!-- BOTÓN VER CATÁLOGO -->
         <div class="boton-volver text-center mt-4">
-          <a href="productos.html" class="btn-volver">
-            Ver el catálogo
-          </a>
+          <a href="productos.html" class="btn-volver">Ver el catálogo</a>
         </div>
-
         <div class="miniaturas"></div>
       </div>
 

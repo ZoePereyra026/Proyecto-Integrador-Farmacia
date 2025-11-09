@@ -2,7 +2,6 @@
   --celeste: #00AEEF;
   --azul-profundo: #0098d3;
   --verde-suave: #61c286;
-  
 }
 
 .navbar {
@@ -10,19 +9,41 @@
   padding: 10px 20px;
 }
 
-.navbar-brand {
+.navbar-brand{
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
   color: #61c286;
-  margin-left: 100px;
+  margin-left: 20px;
   padding: 5px;
 }
 
 .navbar-brand img {
   margin-right: 10px;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#botonCatalogoHeader {
+  display: flex;
+  align-items: center;
+}
+
+#btn_medio {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00AEEF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 /* Enlaces activos o destacados */
@@ -166,10 +187,89 @@ footer p {
   color: black;
 }
 
-/*Diseño Responsive*/
+button.remove,
+#btnClearCart {
+  background-color: var(--celeste);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-/* Dispositivos hasta 768px */
+button.remove:hover,
+#btnClearCart:hover {
+  background-color: #4fc7ec; 
+}
+
+.carrito-vacio {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 30px auto;
+  max-width: 500px;
+  color: #555;
+}
+
+.carrito-vacio h3 {
+  color: var(--azul-profundo);
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+.carrito-vacio p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.icono-vacio {
+  font-size: 60px;
+  color: var(--celeste);
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.btn-volver {
+  display: flex;
+  justify-content: right;
+  padding: 10px 20px;
+  background-color: #00AEEF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #4fc7ec;
+}
+
+.volver-catalogo-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
+
+/*Diseño Responsive*/
 @media (max-width: 768px) {
+  .volver-catalogo-wrapper {
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  .btn-volver {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
   .carrito-wrapper {
     display: flex;
     justify-content: center;

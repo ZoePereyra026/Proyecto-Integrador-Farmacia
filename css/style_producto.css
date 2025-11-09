@@ -1,8 +1,10 @@
 :root {
   --celeste: #00AEEF;
+  --celeste-claro: #4fc7ec;
   --azul-profundo: #0098d3;
   --verde-suave: #61c286;
 }
+
 
 body {
   margin: 0;
@@ -23,7 +25,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
-  color: var(--verde-suave);
+  color: var(--celeste-claro);
   margin-left: 100px;
 }
 
@@ -33,15 +35,17 @@ body {
 
 .detalle-container {
   display: flex;
-  gap: 40px;
   flex-wrap: wrap;
-  padding: 30px;
-  max-width: 900px;
-  margin: 40px auto;
+  gap: 30px;
+  padding: 20px;
+  max-width: 600px;       
+  width: 100%;            
+  margin: 40px auto 20px auto;
   background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .galeria {
@@ -119,6 +123,7 @@ body {
   color: white;
   border: none;
   border-radius: 10px;
+  background-color: var(--celeste);
 }
 
 .btn-cantidad:hover {
@@ -162,12 +167,80 @@ body {
   font-size: 14px;
 }
 
-/* Detalles de los productos */
+.boton-volver {
+  margin-top: 20px;
+}
+
+.btn-volver {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--celeste-claro);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: var(--celeste);
+}
+#iconoCarrito {
+  font-size: 16px;
+  color: var(--celeste);
+  margin-right: 6px; 
+}
+
+#contadorCarrito {
+  position: absolute;
+  top: -10px;    
+  right: -6px;   
+  background-color: var(--celeste);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  line-height: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buscador-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.buscador {
+  flex: 1;
+  min-width: 200px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  .buscador-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 15px;
+  }
+
+  .buscador {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
   .detalle-container {
     flex-direction: column;
     padding: 20px;
-    margin: 80px;
+    margin: 20px auto;
     gap: 30px;
   }
 
@@ -226,4 +299,3 @@ body {
     margin: 100px;
   }
 }
-

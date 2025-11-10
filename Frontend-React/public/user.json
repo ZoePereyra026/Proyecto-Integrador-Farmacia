@@ -1,0 +1,22 @@
+[
+  { "username": "Ana",      "email": "ana@example.com",      "password": "passwordAna123" },
+  { "username": "Juan",     "email": "juan@example.com",     "password": "passwordJuan123" },
+  { "username": "Carla",    "email": "carla@example.com",    "password": "passwordCarla123" },
+  { "username": "Luis",     "email": "luis@example.com",     "password": "passwordLuis123" },
+  { "username": "Maria",    "email": "maria@example.com",    "password": "passwordMaria123" },
+  { "username": "Roberto",  "email": "roberto@example.com",  "password": "passwordRoberto123" },
+  { "username": "Lucia",    "email": "lucia@example.com",    "password": "passwordLucia123" },
+  { "username": "Diego",    "email": "diego@example.com",    "password": "passwordDiego123" },
+  { "username": "Flor",     "email": "flor@example.com",     "password": "passwordFlor123" },
+  { "username": "Marcos",   "email": "marcos@example.com",   "password": "passwordMarcos123" },
+  { "username": "Sofia",    "email": "sofia@example.com",    "password": "passwordSofia123" },
+  { "username": "Javier",   "email": "javier@example.com",   "password": "passwordJavier123" },
+  { "username": "Natalia",  "email": "natalia@example.com",  "password": "passwordNatalia123" },
+  { "username": "Edu",      "email": "edu@example.com",      "password": "passwordEdu123" },
+  { "username": "Valen",    "email": "valen@example.com",    "password": "passwordValen123" },
+  { "username": "Dario",    "email": "dario@example.com",    "password": "passwordDario123" },
+  { "username": "Camila",   "email": "camila@example.com",   "password": "passwordCamila123" },
+  { "username": "Santi",    "email": "santi@example.com",    "password": "passwordSanti123" },
+  { "username": "Romi",     "email": "romi@example.com",     "password": "passwordRomi123" },
+  { "username": "Andres",   "email": "andres@example.com",   "password": "passwordAndres123" }
+]

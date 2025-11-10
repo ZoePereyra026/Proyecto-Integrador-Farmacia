@@ -1,26 +1,22 @@
-### Ruta principal
-GET http://localhost:3000/
+### Obtener todos los usuarios
+GET http://localhost:3000/api/usuarios
 Content-Type: application/json
 
-###
-
-### Registro de usuario
-POST http://localhost:3000/api/usuarios/register
+### Registrar nuevo usuario
+POST http://localhost:3000/api/usuarios/registro
 Content-Type: application/json
 
 {
+  "id": 21,
   "username": "Zoe",
   "email": "zoe@example.com",
-  "password": "123456"
+  "password": "claveZoe123"
 }
 
-###
-
-### Login de usuario
 POST http://localhost:3000/api/usuarios/login
 Content-Type: application/json
 
 {
   "email": "zoe@example.com",
-  "password": "123456"
+  "password": "claveZoe123"
 }

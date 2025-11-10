@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import useProductos from '../hooks/useProductos';
-import '../css/style_producto.css';
+import BotonVerCatalogo from '../components/BotonVerCatalogo'
+import '../../css/style_producto.css';
 
 export default function DetalleProducto() {
   const { id } = useParams();
@@ -32,51 +33,54 @@ export default function DetalleProducto() {
     localStorage.setItem('cart', JSON.stringify(carrito));
     alert('Producto agregado al carrito');
 
-    window.location.reload();
+    window.dispatchEvent(new Event('carritoActualizado'));
   };
 
   if (!producto) {
-    return <div className="text-center py-5">Cargando producto...</div>;
+    return (
+      <div className="container py-5 text-center">
+        Cargando producto...
+      </div>
+    );
   }
 
   return (
-    <main className="my-0 px-3 px-md-5">
+    <div className="container py-4 d-flex justify-content-center">
       <div className="detalle-container">
-        {/* Galería */}
-        <div className="galeria">
-          <img
-            className="imagen-principal"
-            src={producto.imagenUrl}
-            alt={producto.nombre}
-          />
-          <div className="boton-volver text-center mt-4">
-            <Link to="/productos" className="btn-volver">Ver el catálogo</Link>
-          </div>
-          <div className="miniaturas"></div>
-        </div>
+  <div className="grid-superior">
+    <div className="galeria">
+      <img
+        className="imagen-principal"
+        src={producto.imagenUrl}
+        alt={producto.nombre}
+      />
+      <div className="miniaturas"></div>
+    </div>
 
-        {/* Información */}
-        <div className="info-producto">
-          <h1 className="nombre-producto">{producto.nombre}</h1>
-          <p className="precio text-success fw-bold">${producto.precio}</p>
-          <p className="descripcion">{producto.descripcion}</p>
+    <div className="info-producto">
+      <h1 className="nombre-producto">{producto.nombre}</h1>
+      <p className="precio text-success fw-bold">${producto.precio}</p>
+      <p className="descripcion">{producto.descripcion}</p>
 
-          <div className="fila-cantidad">
-            <span className="etiqueta-cantidad"><strong>Cantidad:</strong></span>
-            <div className="cantidad-elegante">
-              <button className="btn-cantidad minus" onClick={decrementar}>−</button>
-              <span className="valor-cantidad">{cantidad}</span>
-              <button className="btn-cantidad plus" onClick={incrementar}>+</button>
-            </div>
-          </div>
-
-          <div className="contenedor-boton">
-            <button className="agregar-carrito btn btn-success" onClick={agregarAlCarrito}>
-              <strong>Agregar al Carrito</strong>
-            </button>
-          </div>
+      <div className="fila-cantidad">
+        <span className="etiqueta-cantidad"><strong>Cantidad:</strong></span>
+        <div className="cantidad-elegante">
+          <button className="btn-cantidad minus" onClick={decrementar}>−</button>
+          <span className="valor-cantidad">{cantidad}</span>
+          <button className="btn-cantidad plus" onClick={incrementar}>+</button>
         </div>
       </div>
-    </main>
+    </div>
+  </div>
+
+  <div className="botones-grid">
+    <BotonVerCatalogo />
+    <button className="agregar-carrito btn btn-success" onClick={agregarAlCarrito}>
+      <strong>Agregar al Carrito</strong>
+    </button>
+  </div>
+</div>
+
+    </div>
   );
 }

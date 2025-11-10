@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../css/style_navbar.css';
 
-export default function Navbar() {
+export default function Navbar({ busqueda, setBusqueda }) {
   const [cartCount, setCartCount] = useState(0);
-  const [query, setQuery] = useState('');
   const location = useLocation();
-  const navigate = useNavigate();
-
   const mostrarBuscador = location.pathname === '/productos';
 
   useEffect(() => {
@@ -31,47 +28,29 @@ export default function Navbar() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (query.trim()) {
-      navigate(`/buscar?q=${encodeURIComponent(query.trim())}`);
-    }
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <div className="container" style={{ marginTop: '20px' }}>
-        {/* Logo de la Farmacia San Martín */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img src="../public/img/logo.png" alt="Logo" width="30" className="me-2" />
           <span className="fw-bold text-success">Farmacia San Martín</span>
         </Link>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
           {mostrarBuscador && (
-            <form
-              className="buscador-wrapper d-flex align-items-center gap-2 me-auto"
-              role="search"
-              onSubmit={handleSearch}
-            >
+            <form className="buscador-wrapper d-flex align-items-center gap-2 me-auto" onSubmit={handleSearch}>
               <input
                 className="form-control buscador"
                 type="search"
-                name="q"
                 placeholder="¿Qué estás buscando?"
-                aria-label="Buscar"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                value={busqueda}
+                onChange={(e) => setBusqueda(e.target.value)}
               />
               <button className="btn btn-success" type="submit">Buscar</button>
             </form>
@@ -81,10 +60,7 @@ export default function Navbar() {
             <li className="nav-item d-flex align-items-center">
               <Link className="nav-link position-relative" to="/carrito">
                 <div style={{ position: 'relative', minWidth: '40px', height: '40px' }}>
-                  <i
-                    className="fas fa-shopping-cart"
-                    style={{ color: "#00AEEF", fontSize: '1.5rem' }}
-                  ></i>
+                  <i className="fas fa-shopping-cart" style={{ color: "#00AEEF", fontSize: '1.5rem' }}></i>
                   <span
                     id="contadorCarrito"
                     className="position-absolute"

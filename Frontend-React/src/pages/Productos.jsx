@@ -11,6 +11,8 @@ export default function Productos() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todos los productos");
   const [cantidadVisible, setCantidadVisible] = useState(9);
   const [busqueda, setBusqueda] = useState("");
+  const [precioMinimo, setPrecioMinimo] = useState("0");
+  const [precioMaximo, setPrecioMaximo] = useState("600");
 
   const productosFiltrados = todosLosProductos.filter(p => {
     const coincideCategoria =
@@ -23,7 +25,11 @@ export default function Productos() {
       busqueda.trim() === "" ||
       p.nombre.toLowerCase().includes(busqueda.trim().toLowerCase());
 
-    return coincideCategoria && coincideBusqueda;
+    const coincidePrecio =
+      (precioMinimo === "" || p.precio >= parseFloat(precioMinimo)) &&
+      (precioMaximo === "" || p.precio <= parseFloat(precioMaximo));
+
+    return coincideCategoria && coincideBusqueda && coincidePrecio;
   });
 
   const productosMostrados = productosFiltrados.slice(0, cantidadVisible);
@@ -42,6 +48,10 @@ export default function Productos() {
                   setCategoriaSeleccionada(cat);
                   setCantidadVisible(9);
                 }}
+                precioMinimo={precioMinimo}
+                setPrecioMinimo={setPrecioMinimo}
+                precioMaximo={precioMaximo}
+                setPrecioMaximo={setPrecioMaximo}
               />
             </aside>
 

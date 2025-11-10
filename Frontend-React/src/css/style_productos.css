@@ -90,6 +90,12 @@
   z-index: 10;
 }
 
+.filtros input[type="number"] {
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 
 @media (max-width: 768px) {
   .buscador-wrapper {

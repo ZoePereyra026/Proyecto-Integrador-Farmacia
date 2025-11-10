@@ -1,48 +1,60 @@
+/* CONTENEDOR GENERAL */
 .form-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
-form{
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-}
-
+/* ÁREA DEL FORMULARIO */
 .form-section {
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
   text-align: center;
-  padding: 40px 20px;;
 }
 
+/* FORMULARIO INTERNO */
 .form-section form {
-  max-width: 400px;
+  max-width: 480px; /* ✅ ligeramente más ancho */
   width: 100%;
+  background-color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+/* LOGO */
 .form-logo {
-  margin-bottom: 1.5rem;
+  display: block;
+  margin-bottom: 0;
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* TÍTULO */
 .form-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
 
+/* CAMPOS */
 .form-floating {
   margin-bottom: 1rem;
 }
 
+/* BOTÓN */
 .btn-primary {
   font-size: 1rem;
   padding: 0.75rem;
 }
 
+/* PIE DE FORMULARIO */
 .form-footer-text {
   margin-top: 1.5rem;
   font-size: 0.9rem;

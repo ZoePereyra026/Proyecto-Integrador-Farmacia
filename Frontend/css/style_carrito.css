@@ -257,7 +257,15 @@ button.remove:hover,
   margin-bottom: 20px;
 }
 
-/*Diseño Responsive*/
+.remove {
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  color: #d9534f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .volver-catalogo-wrapper {
     justify-content: center;

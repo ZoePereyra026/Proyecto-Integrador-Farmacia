@@ -24,17 +24,25 @@ export default function DetalleProducto() {
     const carrito = JSON.parse(localStorage.getItem('cart')) || [];
     const existente = carrito.find(item => item.id === producto.id);
 
+    const precioNumerico = Number(producto.precio?.toString().replace(/[^\d.]/g, '')) || 0;
+
     if (existente) {
       existente.qty += cantidad;
     } else {
-      carrito.push({ ...producto, qty: cantidad });
+      carrito.push({
+        id: producto.id,
+        nombre: producto.nombre,
+        imagenUrl: producto.imagenUrl,
+        precio: precioNumerico,
+        qty: cantidad
+      });
     }
 
     localStorage.setItem('cart', JSON.stringify(carrito));
     alert('Producto agregado al carrito');
-
     window.dispatchEvent(new Event('carritoActualizado'));
   };
+
 
   if (!producto) {
     return (

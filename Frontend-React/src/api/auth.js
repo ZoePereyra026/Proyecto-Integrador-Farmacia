@@ -4,12 +4,11 @@ const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/usuarios`;
 
 export const registerUser = async (id, username, email, password) => {
   try {
-    const res = await axios.post(`${API_URL}/registro`, {
-      id,
-      username,
-      email,
-      password
-    });
+    const res = await axios.post(
+      `${API_URL}/registro`,
+      { id, username, email, password },
+      { withCredentials: true } 
+    );
     return { success: true, data: res.data };
   } catch (error) {
     if (error.message === "Network Error") {
@@ -29,10 +28,11 @@ export const registerUser = async (id, username, email, password) => {
 
 export const loginUser = async (email, password) => {
   try {
-    const res = await axios.post(`${API_URL}/login`, {
-      email,
-      password
-    });
+    const res = await axios.post(
+      `${API_URL}/login`,
+      { email, password },
+      { withCredentials: true } 
+    );
     return { success: true, data: res.data };
   } catch (error) {
     if (error.message === "Network Error") {

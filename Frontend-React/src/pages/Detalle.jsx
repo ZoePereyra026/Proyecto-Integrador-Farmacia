@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 import DetalleProducto from '../components/DetalleProducto';
 import Footer from '../components/Footer';
 import '../../css/style_producto.css';

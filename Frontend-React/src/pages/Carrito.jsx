@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 import VistaCarrito from '../components/VistaCarrito';
 import Footer from '../components/Footer';
 import '../css/style_carrito.css'

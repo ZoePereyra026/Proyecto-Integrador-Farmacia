@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/usuarios`;
+const API_URL = "https://proyecto-integrador-farmacia.onrender.com/api/usuarios";
 
 export const registerUser = async (id, username, email, password) => {
   try {

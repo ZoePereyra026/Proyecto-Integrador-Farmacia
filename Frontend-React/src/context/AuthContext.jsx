@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const usuarioGuardado = localStorage.getItem("usuario");
     if (usuarioGuardado) {
       setUsuario(JSON.parse(usuarioGuardado));
-      window.dispatchEvent(new Event("carritoActualizado")); // actualiza nombre y carrito
+      window.dispatchEvent(new Event("carritoActualizado")); 
     }
   }, []);
 

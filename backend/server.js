@@ -18,30 +18,26 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://farmacia-frontend.onrender.com', 
+  origin: 'https://farmacia-frontend.onrender.com',
   credentials: true
 }));
 
 app.use(express.json());
 
-// Conexión a bases de datos
 connUsuario.once("open", () => console.log("Conectado a base de datos: Usuario"));
 connProducto.once("open", () => console.log("Conectado a base de datos: Producto"));
 connCategoria.once("open", () => console.log("Conectado a base de datos: Categoria"));
 connCarrito.once("open", () => console.log("Conectado a base de datos: Carrito"));
 
-// Ruta principal
 app.get("/", (req, res) =>
   res.json({ message: "Bienvenidos a la API REST de eCommerce - Farmacia San Martín!" })
 );
 
-// Rutas
 app.use("/api/usuarios", userRoutes);
 app.use("/api/productos", productoRoutes);
 app.use("/api/categorias", categoriaRoutes);
 app.use("/api/carritos", carritoRoutes);
 
-// Ruta no encontrada
 app.use((req, res) => res.status(404).json({ error: "Ruta no encontrada" }));
 
 app.listen(PORT, () =>

@@ -1,15 +1,5 @@
 const Usuario = require("../models/userModels");
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-
-const getAllUsers = async (req, res) => {
-  try {
-    const usuarios = await Usuario.find().select("id username");
-    res.json(usuarios);
-  } catch (error) {
-    res.status(500).json({ error: "Error al obtener usuarios" });
-  }
-};
 
 const registerUser = async (req, res) => {
   const { id, username, email, password } = req.body;
@@ -67,32 +57,19 @@ const loginUser = async (req, res) => {
       return res.status(401).json({ error: "Contraseña incorrecta" });
     }
 
-    const token = jwt.sign(
-      { id: usuario.id, username: usuario.username, email: usuario.email },
-      process.env.JWT_SECRET,
-      { expiresIn: "2h" }
-    );
-
     res.status(200).json({
       message: "Inicio de sesión exitoso",
       usuario: {
         id: usuario.id,
         username: usuario.username
-      },
-      token
+      }
     });
   } catch (error) {
     res.status(500).json({ error: "Error interno en el inicio de sesión" });
   }
 };
 
-const getUsuarioActual = (req, res) => {
-  res.json(req.usuario);
-};
-
 module.exports = {
-  getAllUsers,
   registerUser,
-  loginUser,
-  getUsuarioActual
+  loginUser
 };

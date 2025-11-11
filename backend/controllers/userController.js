@@ -1,5 +1,6 @@
 const Usuario = require("../models/userModels");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 const getAllUsers = async (req, res) => {
   try {
@@ -21,12 +22,8 @@ const registerUser = async (req, res) => {
     const emailExistente = await Usuario.findOne({ email });
     const idExistente = await Usuario.findOne({ id });
 
-    if (emailExistente && idExistente) {
-      return res.status(409).json({ error: "El correo y el ID ya están registrados" });
-    } else if (emailExistente) {
-      return res.status(409).json({ error: "El correo ya está registrado" });
-    } else if (idExistente) {
-      return res.status(409).json({ error: "El ID ya está registrado" });
+    if (emailExistente || idExistente) {
+      return res.status(409).json({ error: "El correo o el ID ya están registrados" });
     }
 
     const passwordEncriptada = await bcrypt.hash(password, 10);
@@ -70,20 +67,32 @@ const loginUser = async (req, res) => {
       return res.status(401).json({ error: "Contraseña incorrecta" });
     }
 
+    const token = jwt.sign(
+      { id: usuario.id, username: usuario.username, email: usuario.email },
+      process.env.JWT_SECRET,
+      { expiresIn: "2h" }
+    );
+
     res.status(200).json({
       message: "Inicio de sesión exitoso",
       usuario: {
         id: usuario.id,
         username: usuario.username
-      }
+      },
+      token
     });
   } catch (error) {
     res.status(500).json({ error: "Error interno en el inicio de sesión" });
   }
 };
 
+const getUsuarioActual = (req, res) => {
+  res.json(req.usuario);
+};
+
 module.exports = {
   getAllUsers,
   registerUser,
-  loginUser
+  loginUser,
+  getUsuarioActual
 };

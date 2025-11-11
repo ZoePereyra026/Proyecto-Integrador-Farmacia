@@ -1,0 +1,74 @@
+:root {
+  --celeste: #00AEEF;
+  --celeste-claro: #4fc7ec; 
+}
+
+/* Fondo HERO con celeste */
+.hero-section {
+  background-color: 	#61c286; 
+  color: white;
+  
+}
+
+/* Botones principales */
+.btn-primary {
+  background-color: #00AEEF;
+  border-color: #00AEEF;
+}
+
+.btn-primary:hover {
+  background-color: #0098d3;
+  border-color: #0098d3;
+}
+
+/* Enlaces activos o destacados */
+.nav-link.active,
+.nav-link:hover {
+  color: #00AEEF !important;
+}
+
+/* Tarjetas de productos con sombra leve */
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+/* Títulos o íconos destacados en verde */
+.text-acento-verde {
+  color: #36C48E;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--celeste);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: var(--celeste-claro);
+}
+
+#contadorCarrito {
+  font-size: 12px;
+  padding: 4px 6px;
+  background-color: #00AEEF;
+  color: white;
+}
+
+.display-5 {
+  color: white;
+}

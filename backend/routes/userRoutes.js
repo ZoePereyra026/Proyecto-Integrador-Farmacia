@@ -1,16 +1,14 @@
 const { Router } = require("express");
-const userController = require("../controllers/userController");
-const { verificarToken } = require("../middleware/authMiddleware"); // ajustá ruta si tu archivo está en otra carpeta
+const {
+  getAllUsers,
+  registerUser,
+  loginUser
+} = require("../controllers/userController");
 
 const router = Router();
 
-// Registro de nuevo usuario
-router.post("/register", userController.registerUser);
-
-// Inicio de sesión
-router.post("/login", userController.loginUser);
-
-// Obtener perfil del usuario autenticado
-router.get("/me", verificarToken, userController.getMe);
+router.get("/", getAllUsers);       
+router.post("/registro", registerUser);
+router.post("/login", loginUser);   
 
 module.exports = router;

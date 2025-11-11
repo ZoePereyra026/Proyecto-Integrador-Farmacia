@@ -1,63 +1,57 @@
 const Usuario = require("../models/userModels");
-const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
-// Función para generar el token
-const crearToken = (usuario) => {
-  return jwt.sign(
-    { id: usuario._id, role: usuario.role },
-    process.env.JWT_SECRET,
-    { expiresIn: "1d" }
-  );
+const getAllUsers = async (req, res) => {
+  try {
+    const usuarios = await Usuario.find().select("id username");
+    res.json(usuarios);
+  } catch (error) {
+    res.status(500).json({ error: "Error al obtener usuarios" });
+  }
 };
 
-// Registro de usuario
 const registerUser = async (req, res) => {
-  const { username, email, password, role } = req.body;
+  const { id, username, email, password } = req.body;
 
-  if (!username || !email || !password) {
-    return res.status(400).json({ error: "El usuario, email y contraseña son obligatorios" });
-  }
-
-  if (role && !["user", "admin"].includes(role)) {
-    return res.status(400).json({ error: "El rol debe ser 'user' o 'admin'" });
+  if (!id || !username || !email || !password) {
+    return res.status(400).json({ error: "Todos los campos son obligatorios" });
   }
 
   try {
-    const usuarioExistente = await Usuario.findOne({ email });
-    if (usuarioExistente) {
-      return res.status(409).json({ error: "Ya existe un usuario con ese correo electrónico" });
+    const emailExistente = await Usuario.findOne({ email });
+    const idExistente = await Usuario.findOne({ id });
+
+    if (emailExistente && idExistente) {
+      return res.status(409).json({ error: "El correo y el ID ya están registrados" });
+    } else if (emailExistente) {
+      return res.status(409).json({ error: "El correo ya está registrado" });
+    } else if (idExistente) {
+      return res.status(409).json({ error: "El ID ya está registrado" });
     }
 
-    const nuevoUsuario = await Usuario.create({
+    const passwordEncriptada = await bcrypt.hash(password, 10);
+
+    const nuevoUsuario = new Usuario({
+      id,
       username,
       email,
-      password,
-      role: role || "user"
+      password: passwordEncriptada
     });
 
-    const token = crearToken(nuevoUsuario);
+    await nuevoUsuario.save();
 
     res.status(201).json({
       message: "Usuario registrado con éxito",
       usuario: {
-        _id: nuevoUsuario._id,
-        username: nuevoUsuario.username,
-        email: nuevoUsuario.email,
-        role: nuevoUsuario.role
-      },
-      token
+        id: nuevoUsuario.id,
+        username: nuevoUsuario.username
+      }
     });
   } catch (error) {
-    console.error("Error al registrar:", error);
-    res.status(500).json({
-      error: "Error interno al registrar usuario",
-      detalle: error.message
-    });
+    res.status(500).json({ error: "Error interno al registrar usuario" });
   }
 };
 
-// Login de usuario
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
@@ -68,7 +62,7 @@ const loginUser = async (req, res) => {
   try {
     const usuario = await Usuario.findOne({ email });
     if (!usuario) {
-      return res.status(404).json({ error: "El Usuario no ha sido encontrado" });
+      return res.status(404).json({ error: "Usuario no encontrado" });
     }
 
     const coincide = await bcrypt.compare(password, usuario.password);
@@ -76,43 +70,20 @@ const loginUser = async (req, res) => {
       return res.status(401).json({ error: "Contraseña incorrecta" });
     }
 
-    const token = crearToken(usuario);
-
     res.status(200).json({
       message: "Inicio de sesión exitoso",
       usuario: {
-        _id: usuario._id,
-        username: usuario.username,
-        email: usuario.email,
-        role: usuario.role
-      },
-      token
+        id: usuario.id,
+        username: usuario.username
+      }
     });
   } catch (error) {
-    console.error("Error en login:", error);
     res.status(500).json({ error: "Error interno en el inicio de sesión" });
   }
 };
 
-// Obtener datos del usuario logueado (GET /api/usuarios/me)
-const getMe = async (req, res) => {
-  try {
-    // el middleware Auth debe haber puesto req.user = { id, role, ... }
-    const userId = req.user && req.user.id;
-    if (!userId) return res.status(401).json({ error: "No autorizado" });
-
-    const usuario = await Usuario.findById(userId).select("-password");
-    if (!usuario) return res.status(404).json({ error: "Usuario no encontrado" });
-
-    return res.json({ usuario });
-  } catch (err) {
-    console.error("Error en getMe:", err);
-    return res.status(500).json({ error: "Error interno" });
-  }
-};
-
 module.exports = {
+  getAllUsers,
   registerUser,
-  loginUser,
-  getMe
+  loginUser
 };

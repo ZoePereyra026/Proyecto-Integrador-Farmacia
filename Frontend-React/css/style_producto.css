@@ -1,0 +1,283 @@
+:root {
+  --celeste: #00AEEF;
+  --celeste-claro: #4fc7ec;
+  --azul-profundo: #0098d3;
+  --verde-suave: #61c286;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--verde-suave);
+  color: #333;
+}
+
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--celeste-claro);
+  margin-left: 100px;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.detalle-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 0px;
+  padding: 30px;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.grid-superior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.galeria {
+  text-align: center;
+}
+
+.imagen-principal {
+  width: 75%;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+.miniaturas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.miniaturas img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+}
+
+.info-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.info-producto h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--azul-profundo);
+}
+
+.descripcion {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.fila-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.etiqueta-cantidad {
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
+}
+
+.cantidad-elegante {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.btn-cantidad {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--celeste);
+}
+
+.btn-cantidad:hover {
+  background-color: var(--verde-suave);
+}
+
+.valor-cantidad {
+  width: 32px;
+  text-align: center;
+  font-weight: 500;
+  color: black;
+}
+
+.botones-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.boton-volver {
+  margin: 0;
+}
+
+.btn-volver,
+.agregar-carrito {
+  min-width: 140px;
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-volver {
+  background-color: var(--celeste-claro);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-volver:hover {
+  background-color: var(--celeste);
+}
+
+.agregar-carrito {
+  background-color: var(--verde-suave);
+  color: white;
+}
+
+.agregar-carrito:hover {
+  background-color: var(--celeste);
+}
+
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 1.5rem 0;
+  color: grey;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .grid-superior {
+    grid-template-columns: 1fr;
+    gap: 20px; 
+    text-align: center;
+  }
+
+  .detalle-container{
+    width: 400px;
+  }
+
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagen-principal {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .miniaturas {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .miniaturas img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .info-producto {
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .info-producto h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .precio {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .descripcion {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .fila-cantidad {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .botones-grid {
+    flex-direction: column;
+    gap: 15px; 
+    padding: 0 20px;
+  }
+
+  .agregar-carrito,
+  .btn-volver {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .agregar-carrito {
+    margin-bottom: 10px;
+  }
+}

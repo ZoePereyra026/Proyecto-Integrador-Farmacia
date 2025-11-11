@@ -1,0 +1,150 @@
+.buscador-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.buscador {
+  flex: 1;
+  min-width: 200px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.img-producto {
+  width: 100%;
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  padding: 8px;
+  margin: 0 auto;
+  display: block;
+}
+
+.filtros {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  align-items: center;
+}
+
+#footer {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+#iconoCarrito {
+  font-size: 18px;
+  color: #00AEEF;
+  position: relative;
+}
+
+#contadorCarrito {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #00AEEF;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  line-height: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.filtros input[type="number"] {
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .buscador-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 15px;
+  }
+
+  .buscador {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .detalle-container {
+    flex-direction: column;
+    padding: 15px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+
+  .imagen-principal {
+    max-width: 240px;
+  }
+
+  .info-producto h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .precio,
+  .descripcion {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .fila-cantidad {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .agregar-carrito {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  #contadorCarrito {
+  top: -6px;
+  right: -6px;
+}
+}

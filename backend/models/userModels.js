@@ -1,37 +1,32 @@
+const { connUsuario } = require("../config/database");
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
 
-const UsuarioSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true,
+    unique: true
+  },
   username: {
     type: String,
     required: true,
-    unique: true
+    trim: true
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    lowercase: true,
+    trim: true
   },
   password: {
     type: String,
     required: true
-  },
-  role: {
-    type: String,
-    enum: ["user", "admin"],
-    default: "user"
   }
-}, { timestamps: true });
-
-// Encriptar contraseña antes de guardarla en la base de datos
-UsuarioSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password, 10);
-  next();
+}, {
+  collection: "usuarios"
 });
 
-const { connUsuario } = require("../config/database");
-const Usuario = connUsuario.model("Usuario", UsuarioSchema, "usuarios");
-
+const Usuario = connUsuario.model("Usuario", userSchema);
 
 module.exports = Usuario;

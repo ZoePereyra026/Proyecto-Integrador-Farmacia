@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ibuprofeno 600mg",
+    "descripcion": "Antiinflamatorio no esteroideo para el dolor y la fiebre.",
+    "precio": 450,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Bayer",
+    "imagenUrl": "/img/ibuprofeno_600.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Paracetamol 500mg",
+    "descripcion": "Analgésico y antipirético de uso común.",
+    "precio": 380,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Genfar",
+    "imagenUrl": "/img/paracetamol_500.jpeg"
+  },
+  {
+    "id": 3,
+    "nombre": "Omeprazol 20mg",
+    "descripcion": "Reductor de ácido gástrico, ideal para gastritis y reflujo.",
+    "precio": 520,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Aziatop",
+    "imagenUrl": "/img/omeprazol_20.jpeg"
+  },
+  {
+    "id": 4,
+    "nombre": "Amoxicilina 500mg",
+    "descripcion": "Antibiótico de amplio espectro, indicado para infecciones bacterianas.",
+    "precio": 750,
+    "categoria": ["Medicamentos"],
+    "fabricante": "GlaxoSmithKline",
+    "imagenUrl": "/img/amoxicilina_500.jpeg"
+  },
+  {
+    "id": 5,
+    "nombre": "Clorfenamina",
+    "descripcion": "Antihistamínico para alergias respiratorias o cutáneas.",
+    "precio": 290,
+    "categoria": ["Medicamentos", "Respiratorio"],
+    "fabricante": "Sanofi",
+    "imagenUrl": "/img/clorfenamina.jpeg"
+  },
+  {
+    "id": 6,
+    "nombre": "Vitamina C 1000mg",
+    "descripcion": "Suplemento antioxidante para fortalecer el sistema inmunológico.",
+    "precio": 620,
+    "categoria": ["Suplementos"],
+    "fabricante": "Nature’s Bounty",
+    "imagenUrl": "/img/vitamina_c.webp"
+  },
+  {
+    "id": 7,
+    "nombre": "Aspirina 100mg",
+    "descripcion": "Anticoagulante para prevenir eventos cardiovasculares.",
+    "precio": 430,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Bayer",
+    "imagenUrl": "/img/aspirina_100.jpeg"
+  },
+  {
+    "id": 8,
+    "nombre": "Loratadina",
+    "descripcion": "Antihistamínico de segunda generación, no sedante.",
+    "precio": 350,
+    "categoria": ["Respiratorio"],
+    "fabricante": "Pfizer",
+    "imagenUrl": "/img/loratadina.jpeg"
+  },
+  {
+    "id": 9,
+    "nombre": "Crema con Clotrimazol",
+    "descripcion": "Antifúngico tópico para infecciones cutáneas.",
+    "precio": 680,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Bristol-Myers Squibb",
+    "imagenUrl": "/img/crema_clotrimazol.jpeg"
+  },
+  {
+    "id": 10,
+    "nombre": "Sales de Rehidratación Oral",
+    "descripcion": "Mezcla electrolítica para tratar la deshidratación leve o moderada.",
+    "precio": 180,
+    "categoria": ["Pediatría", "Medicamentos"],
+    "fabricante": "Abbott",
+    "imagenUrl": "/img/sales_rehidratacion.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Ácido Fólico",
+    "descripcion": "Suplemento esencial en embarazo y anemia.",
+    "precio": 240,
+    "categoria": ["Suplementos", "Pediatría"],
+    "fabricante": "Laboratorios Richmond",
+    "imagenUrl": "/img/acido_folico.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Jarabe de Ambroxol",
+    "descripcion": "Mucolítico para el tratamiento de afecciones respiratorias.",
+    "precio": 410,
+    "categoria": ["Respiratorio", "Pediatría"],
+    "fabricante": "Novartis",
+    "imagenUrl": "/img/jarabe_ambroxol.jpeg"
+  },
+  {
+    "id": 13,
+    "nombre": "Parches Térmicos",
+    "descripcion": "Alivio muscular y de dolor localizado por medio de calor.",
+    "precio": 700,
+    "categoria": ["Medicamentos", "Cuidado Personal"],
+    "fabricante": "Salonpas",
+    "imagenUrl": "/img/parches_termicos.jpeg"
+  },
+  {
+    "id": 14,
+    "nombre": "Melatonina 5mg",
+    "descripcion": "Regulador natural del sueño para insomnio leve.",
+    "precio": 560,
+    "categoria": ["Suplementos"],
+    "fabricante": "Natrol",
+    "imagenUrl": "/img/melatonina.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Spray Antiséptico",
+    "descripcion": "Solución tópica para higiene de heridas y cortes.",
+    "precio": 310,
+    "categoria": ["Higiene"],
+    "fabricante": "Dermaglos",
+    "imagenUrl": "/img/spray_antiseptico.jpeg"
+  },
+  {
+    "id": 16,
+    "nombre": "Crema Solar FPS 50",
+    "descripcion": "Protección alta contra rayos UVB/UVA.",
+    "precio": 980,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "La Roche-Posay",
+    "imagenUrl": "/img/crema_solar.jpeg"
+  },
+  {
+    "id": 17,
+    "nombre": "Tiras Reactivas Glucosa",
+    "descripcion": "Medición precisa de niveles de glucosa en sangre.",
+    "precio": 1300,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Accu-Chek",
+    "imagenUrl": "/img/tiras_glucosa.jpeg"
+  },
+  {
+    "id": 18,
+    "nombre": "Nebulizador Portátil",
+    "descripcion": "Dispositivo para administración de medicamentos inhalados.",
+    "precio": 3500,
+    "categoria": ["Respiratorio", "Pediatría"],
+    "fabricante": "Omron",
+    "imagenUrl": "/img/nebulizador_portatil.jpeg"
+  },
+  {
+    "id": 19,
+    "nombre": "Alcohol en Gel",
+    "descripcion": "Desinfectante de manos sin enjuague.",
+    "precio": 250,
+    "categoria": ["Higiene"],
+    "fabricante": "Laboratorios Bagó",
+    "imagenUrl": "/img/alcohol_gel.jpeg"
+  },
+  {
+    "id": 20,
+    "nombre": "Gel para Piernas Cansadas",
+    "descripcion": "Alivio refrescante para fatiga muscular y circulación.",
+    "precio": 780,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Just",
+    "imagenUrl": "/img/gel_piernas_cansadas.jpeg"
+  },
+  {
+    "id": 21,
+    "nombre": "Toallitas Húmedas Antibacteriales",
+    "descripcion": "Limpieza rápida de manos y superficies sin irritaciones.",
+    "precio": 320,
+    "categoria": ["Higiene"],
+    "fabricante": "Huggies",
+    "imagenUrl": "/img/toallitas_humedas.jpeg"
+  },
+  {
+    "id": 22,
+    "nombre": "Colágeno Hidrolizado",
+    "descripcion": "Suplemento para salud articular y de piel.",
+    "precio": 980,
+    "categoria": ["Suplementos"],
+    "fabricante": "NeoLife",
+    "imagenUrl": "/img/colageno_hidrolizado.jpeg"
+  },
+  {
+    "id": 23,
+    "nombre": "Antiséptico Bucal Sin Alcohol",
+    "descripcion": "Enjuague oral para mantener higiene y frescura.",
+    "precio": 450,
+    "categoria": ["Higiene"],
+    "fabricante": "Listerine",
+    "imagenUrl": "/img/antiseptico_bucal.jpeg"
+  },
+  {
+    "id": 24,
+    "nombre": "Guantes de Nitrilo",
+    "descripcion": "Guantes resistentes para protección médica o doméstica.",
+    "precio": 850,
+    "categoria": ["Higiene"],
+    "fabricante": "3M",
+    "imagenUrl": "/img/guantes_nitrilo.jpeg"
+  },
+  {
+    "id": 25,
+    "nombre": "Jarabe de Hierro",
+    "descripcion": "Suplemento para prevenir y tratar anemia ferropénica.",
+    "precio": 590,
+    "categoria": ["Suplementos", "Pediatría"],
+    "fabricante": "Laboratorio Elea",
+    "imagenUrl": "/img/jarabe_hierro.jpeg"
+  },
+  {
+    "id": 26,
+    "nombre": "Desinfectante en Spray",
+    "descripcion": "Elimina el 99.9% de bacterias en superficies.",
+    "precio": 490,
+    "categoria": ["Higiene"],
+    "fabricante": "Lysoform",
+    "imagenUrl": "/img/desinfectante.jpeg"
+  },
+  {
+    "id": 27,
+    "nombre": "Crema Antiestrías",
+    "descripcion": "Ayuda a mejorar la elasticidad y prevenir marcas en la piel.",
+    "precio": 730,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Cicatricure",
+    "imagenUrl": "/img/crema_antiestrias.jpeg"
+  },
+  {
+    "id": 28,
+    "nombre": "Sueros Fisiológicos",
+    "descripcion": "Limpieza nasal y ocular en bebés y adultos.",
+    "precio": 220,
+    "categoria": ["Pediatría"],
+    "fabricante": "Laboratorios Gador",
+    "imagenUrl": "/img/sueros_fisiologicos.jpeg"
+  },
+  {
+    "id": 29,
+    "nombre": "Crema Calmante Post Solar",
+    "descripcion": "Alivio inmediato para quemaduras leves por sol.",
+    "precio": 670,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Dermaglos",
+    "imagenUrl": "/img/crema_post_solar.jpeg"
+  },
+  {
+    "id": 30,
+    "nombre": "Aceite Esencial de Lavanda",
+    "descripcion": "Relajante natural para aromaterapia y uso tópico.",
+    "precio": 840,
+    "categoria": ["Suplementos"],
+    "fabricante": "Just",
+    "imagenUrl": "/img/aceite_lavanda.jpeg"
+  },
+  {
+    "id": 31,
+    "nombre": "Gel Antibacterial con Aloe",
+    "descripcion": "Desinfecta las manos mientras protege la piel.",
+    "precio": 260,
+    "categoria": ["Higiene"],
+    "fabricante": "ProtectGel",
+    "imagenUrl": "/img/gel_aloe.jpeg"
+  },
+  {
+    "id": 32,
+    "nombre": "Protector Labial FPS 30",
+    "descripcion": "Protección solar para labios sensibles.",
+    "precio": 150,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Vaseline",
+    "imagenUrl": "/img/protector_labial.jpeg"
+  },
+  {
+    "id": 33,
+    "nombre": "Té Medicinal Digestivo",
+    "descripcion": "Mezcla natural de hierbas para aliviar indigestión.",
+    "precio": 340,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Hierbas Andinas",
+    "imagenUrl": "/img/te_medicinal.jpeg"
+  },
+  {
+    "id": 34,
+    "nombre": "Pomada de Árnica",
+    "descripcion": "Alivio para golpes y dolores musculares.",
+    "precio": 420,
+    "categoria": ["Medicamentos", "Cuidado Personal"],
+    "fabricante": "Just",
+    "imagenUrl": "/img/pomada_arnica.jpeg"
+  },
+  {
+    "id": 35,
+    "nombre": "Laxante Suave",
+    "descripcion": "Estimulante intestinal para constipación ocasional.",
+    "precio": 330,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Bayer",
+    "imagenUrl": "/img/laxante_suave.png"
+  },
+  {
+    "id": 36,
+    "nombre": "Crema Antifúngica de Tea Tree",
+    "descripcion": "Tratamiento natural para infecciones cutáneas por hongos.",
+    "precio": 540,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Organika",
+    "imagenUrl": "/img/crema_antifungica.jpeg"
+  },
+  {
+    "id": 37,
+    "nombre": "Pastillas para la Garganta con Propóleo",
+    "descripcion": "Alivio rápido para irritación y dolor en garganta.",
+    "precio": 290,
+    "categoria": ["Respiratorio"],
+    "fabricante": "Sanavita",
+    "imagenUrl": "/img/pastillas_propoleo.jpeg"
+  },
+  {
+    "id": 38,
+    "nombre": "Spray Nasal Descongestionante",
+    "descripcion": "Alivio rápido de congestión nasal por resfríos o alergias.",
+    "precio": 370,
+    "categoria": ["Respiratorio"],
+    "fabricante": "Vick",
+    "imagenUrl": "/img/spray_descongestionante.jpeg"
+  },
+  {
+    "id": 39,
+    "nombre": "Crema Refrescante para Pies",
+    "descripcion": "Hidratación y alivio para pies cansados y secos.",
+    "precio": 610,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Eucerin",
+    "imagenUrl": "/img/crema_pies.jpeg"
+  },
+  {
+    "id": 40,
+    "nombre": "Solución Oftálmica Lubricante",
+    "descripcion": "Alivio para ojos secos o irritados.",
+    "precio": 390,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Optrex",
+    "imagenUrl": "/img/solución_lubricante_oftalmologica.jpeg"
+  },
+  {
+    "id": 41,
+    "nombre": "Loción Micelar para Limpieza Facial",
+    "descripcion": "Remueve impurezas sin irritar ni resecar la piel.",
+    "precio": 620,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Bioderma",
+    "imagenUrl": "/img/locion_micelar.jpeg"
+  },
+  {
+    "id": 42,
+    "nombre": "Tiritas Impermeables",
+    "descripcion": "Protección para heridas pequeñas en ambientes húmedos.",
+    "precio": 150,
+    "categoria": ["Pediatría"],
+    "fabricante": "Curitas",
+    "imagenUrl": "/img/tiritas_impermeables.jpeg"
+  },
+  {
+    "id": 43,
+    "nombre": "Suero Nutritivo Capilar",
+    "descripcion": "Fortalece y repara el cabello dañado con vitaminas B y E.",
+    "precio": 890,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Capilatis",
+    "imagenUrl": "/img/suero_capilar.jpeg"
+  },
+  {
+    "id": 44,
+    "nombre": "Complemento de Magnesio",
+    "descripcion": "Mejora la función muscular y reduce el estrés físico.",
+    "precio": 670,
+    "categoria": ["Suplementos"],
+    "fabricante": "Now Foods",
+    "imagenUrl": "/img/complemento_magnesio.jpeg"
+  },
+  {
+    "id": 45,
+    "nombre": "Inhalador Descongestivo",
+    "descripcion": "Mejora la respiración nasal de forma instantánea.",
+    "precio": 190,
+    "categoria": ["Respiratorio"],
+    "fabricante": "Mentholatum",
+    "imagenUrl": "/img/inhalador_descongestivo.jpeg"
+  },
+  {
+    "id": 46,
+    "nombre": "Gel Íntimo Antibacterial",
+    "descripcion": "Higiene diaria con pH balanceado para la zona íntima.",
+    "precio": 510,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Asepxia",
+    "imagenUrl": "/img/gel_intimo.jpeg"
+  },
+  {
+    "id": 47,
+    "nombre": "Pastillas Antiacidez",
+    "descripcion": "Neutraliza la acidez estomacal al instante.",
+    "precio": 430,
+    "categoria": ["Medicamentos"],
+    "fabricante": "Rennie",
+    "imagenUrl": "/img/pastillas_antiacidez.jpeg"
+  },
+  {
+    "id": 48,
+    "nombre": "Crema de Manos con Urea",
+    "descripcion": "Hidratación profunda para pieles secas o agrietadas.",
+    "precio": 610,
+    "categoria": ["Cuidado Personal"],
+    "fabricante": "Eucerin",
+    "imagenUrl": "/img/crema_manos.jpeg"
+  },
+  {
+    "id": 49,
+    "nombre": "Tapones para Oídos de Espuma",
+    "descripcion": "Reduce el ruido ambiental y protege durante el sueño.",
+    "precio": 180,
+    "categoria": ["Pediatría"],
+    "fabricante": "3M",
+    "imagenUrl": "/img/tapones_oidos.jpeg"
+  },
+  {
+    "id": 50,
+    "nombre": "Solución Antiséptica para Pies",
+    "descripcion": "Desinfecta y refresca, ideal tras el deporte.",
+    "precio": 580,
+    "categoria": ["Cuidado Personal", "Higiene"],
+    "fabricante": "Dr. Scholl",
+    "imagenUrl": "/img/solucion_antiseptica_pies.jpeg"
+  }
+]

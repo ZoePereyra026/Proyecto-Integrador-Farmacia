@@ -1,0 +1,104 @@
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar.minimal {
+  padding: 0.5rem 1rem; 
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  height: 100px; 
+  display: flex;
+  align-items: center;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  height: 100%; 
+}
+
+.navbar-brand img {
+  margin-right: 0.5rem;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-bottom: 10px;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.buscador-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 500px;
+  padding-top: 16px;
+}
+
+.buscador {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 20px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.95rem;
+}
+
+.fa-shopping-cart {
+  font-size: 1.2rem;
+  color: #00AEEF;
+}
+
+#contadorCarrito {
+  font-size: 0.75rem;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  line-height: 18px;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 999px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navbar-toggler {
+    margin-bottom: 0;
+  }
+}
